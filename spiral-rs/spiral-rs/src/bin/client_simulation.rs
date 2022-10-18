@@ -6,7 +6,7 @@ use spiral_rs::params::*;
 use spiral_rs::server::*;
 use spiral_rs::util::*;
 use std::env;
-use std::fs;
+
 use std::time::Instant;
 
 fn print_params_summary(params: &Params) {
@@ -24,7 +24,7 @@ fn main() {
     let params;
     let args: Vec<String> = env::args().collect();
 
-    // New configuration
+    // new configuration
     let _cfg_10_256 = r#"
     {
         "n": 2,
@@ -43,12 +43,13 @@ fn main() {
 "#;
 
     if args.len() == 2 {
+        //input parameter file
         // let inp_params_fname = &args[1];
-        // let params_json_str = fs::read_to_string(inp_params_fname).unwrap();
 
         params = params_from_json(&_cfg_10_256.replace("'", "\""));
     } else {
-        let target_num_log2: usize = args[1].parse().unwrap();
+        // get predefined parameters
+        let target_num_log2: usize = args[1].parse().unwrap(); // power of 2 DB size
         let item_size_bytes: usize = args[2].parse().unwrap();
 
         params = get_params_from_store(target_num_log2, item_size_bytes);

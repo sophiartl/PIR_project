@@ -1,3 +1,4 @@
+use csv::Writer;
 use rand::thread_rng;
 use rand::Rng;
 use spiral_rs::arith::*;
@@ -6,6 +7,7 @@ use spiral_rs::params::*;
 use spiral_rs::server::*;
 use spiral_rs::util::*;
 use std::env;
+use std::fs::OpenOptions;
 
 use std::time::Instant;
 
@@ -43,11 +45,13 @@ fn main() {
 "#;
 
     if args.len() == 2 {
+        //input parameter file
         // let inp_params_fname = &args[1];
 
         params = params_from_json(&_cfg_10_256.replace("'", "\""));
     } else {
-        let target_num_log2: usize = args[1].parse().unwrap();
+        // get predefined parameters
+        let target_num_log2: usize = args[1].parse().unwrap(); // power of 2 DB size
         let item_size_bytes: usize = args[2].parse().unwrap();
 
         params = get_params_from_store(target_num_log2, item_size_bytes);
@@ -79,11 +83,15 @@ fn main() {
     println!("processing query");
     let now = Instant::now();
     let response = process_query(&params, &pub_params, &query, db.as_slice());
-    println!("done processing (took {} us).", now.elapsed().as_micros());
+    let end = now.elapsed().as_micros();
+    println!("processing query (took {} us).", end);
     println!("response size: {} bytes", response.len());
 
     println!("decoding response");
+    let now_dec = Instant::now();
     let result = client.decode_response(response.as_slice());
+    let end_dec = now_dec.elapsed().as_micros();
+    println!("decoding reponse (took {} us).", end_dec);
 
     let p_bits = log2_ceil(params.pt_modulus) as usize;
     let corr_result = corr_item.to_vec(p_bits, params.modp_words_per_chunk());
@@ -94,4 +102,21 @@ fn main() {
     }
 
     println!("completed correctly!");
+    let mut file = OpenOptions::new()
+        .write(true)
+        .append(true)
+        .open("results.csv")
+        .unwrap();
+    let mut wtr = csv::Writer::from_writer(file);
+
+    wtr.write_record(&[
+        params.num_items().to_string(),
+        params.item_size().to_string(),
+        pub_params_buf.len().to_string(),
+        response.len().to_string(),
+        query_buf.len().to_string(),
+        end.to_string(),
+        end_dec.to_string(),
+    ]);
+    wtr.flush();
 }

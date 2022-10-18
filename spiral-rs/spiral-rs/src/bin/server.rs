@@ -133,6 +133,7 @@ async fn query<'a>(
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     let args: Vec<String> = env::args().collect();
+    println!("{}", &args[1]);
     let db_preprocessed_path = &args[1];
 
     let cfg_expand = r#"

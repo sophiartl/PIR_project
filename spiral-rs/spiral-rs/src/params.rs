@@ -116,6 +116,7 @@ impl Params {
     }
 
     pub fn num_items(&self) -> usize {
+        // 2^nu1 * 2^nu2
         (1 << self.db_dim_1) * (1 << self.db_dim_2)
     }
 
