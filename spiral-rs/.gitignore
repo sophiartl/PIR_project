@@ -1,4 +1,3 @@
 target/
 *.gz
 *.dat
-spiral-rs/spiral-rs/db_256.dbp

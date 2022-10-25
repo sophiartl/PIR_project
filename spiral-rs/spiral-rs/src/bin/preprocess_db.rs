@@ -4,8 +4,21 @@ use std::io::Write;
 
 use spiral_rs::server::*;
 use spiral_rs::util::*;
+use std::time::Instant;
 
 fn main() {
+    // do so that we can get our own json file from command line
+    let mut file = OpenOptions::new()
+        .write(true)
+        .append(true)
+        .open("results.csv")
+        .unwrap();
+    let mut wtr = csv::Writer::from_writer(file);
+
+    wtr.write_record(&["helloe".to_string(), 4.to_string()]);
+
+    wtr.flush();
+
     let base_params = params_from_json(&CFG_10_256.replace("'", "\""));
 
     let params = &base_params;
@@ -19,12 +32,13 @@ fn main() {
 
     let db = load_db_from_seek(params, &mut inp_file);
     let db_slice = db.as_slice();
-    println!("before output");
 
     let mut out_file = File::create(out_db_path).unwrap();
-    println!("db length: {}", db.len());
+    let now = Instant::now();
     for i in 0..db.len() {
         let coeff = db_slice[i];
         out_file.write_all(&coeff.to_ne_bytes()).unwrap();
     }
+    let end = now.elapsed().as_micros();
+    println!("Database proprocessing time {} us", end);
 }

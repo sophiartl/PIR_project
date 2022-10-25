@@ -260,6 +260,7 @@ static ALL_PARAMS_STORE_FNAME: &str = "../params_store.json";
 
 pub fn get_params_from_store(target_num_log2: usize, item_size: usize) -> Params {
     let params_store_str = fs::read_to_string(ALL_PARAMS_STORE_FNAME).unwrap();
+
     let v: Value = serde_json::from_str(&params_store_str).unwrap();
     let nearest_target_num = target_num_log2;
     let nearest_item_size = 1 << usize::max(log2_ceil_usize(item_size), 8);

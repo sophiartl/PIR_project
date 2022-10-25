@@ -1,4 +1,3 @@
-use csv::Writer;
 use rand::thread_rng;
 use rand::Rng;
 use spiral_rs::arith::*;
@@ -7,8 +6,8 @@ use spiral_rs::params::*;
 use spiral_rs::server::*;
 use spiral_rs::util::*;
 use std::env;
+use std::fs;
 use std::fs::OpenOptions;
-
 use std::time::Instant;
 
 fn print_params_summary(params: &Params) {
@@ -46,9 +45,9 @@ fn main() {
 
     if args.len() == 2 {
         //input parameter file
-        // let inp_params_fname = &args[1];
-
-        params = params_from_json(&_cfg_10_256.replace("'", "\""));
+        let inp_params_fname = &args[1];
+        let params_store_str = fs::read_to_string(inp_params_fname).unwrap();
+        params = params_from_json(&params_store_str.replace("'", "\""));
     } else {
         // get predefined parameters
         let target_num_log2: usize = args[1].parse().unwrap(); // power of 2 DB size
@@ -113,10 +112,11 @@ fn main() {
         params.num_items().to_string(),
         params.item_size().to_string(),
         pub_params_buf.len().to_string(),
-        response.len().to_string(),
         query_buf.len().to_string(),
         end.to_string(),
+        response.len().to_string(),
         end_dec.to_string(),
     ]);
+
     wtr.flush();
 }

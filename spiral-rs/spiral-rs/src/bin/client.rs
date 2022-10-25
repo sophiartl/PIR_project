@@ -2,6 +2,7 @@ use serde_json::Value;
 use spiral_rs::client::*;
 use spiral_rs::util::*;
 use std::env;
+use std::fs::OpenOptions;
 use std::time::Instant;
 
 fn send_api_req_text(api_url: &str, path: &str, data: Vec<u8>) -> Result<String, reqwest::Error> {
@@ -9,6 +10,7 @@ fn send_api_req_text(api_url: &str, path: &str, data: Vec<u8>) -> Result<String,
         .timeout(None)
         .build()
         .unwrap();
+
     client
         .post(format!("{}{}", api_url, path))
         .body(data)
@@ -30,7 +32,18 @@ fn send_api_req_vec(api_url: &str, path: &str, data: Vec<u8>) -> Result<Vec<u8>,
 }
 
 fn main() {
-    let cfg_expand = r#"
+    let file = OpenOptions::new()
+        .write(true)
+        .append(true)
+        .open("console.csv")
+        .unwrap();
+    let mut wtr = csv::Writer::from_writer(file);
+
+    wtr.write_record(&["hello", "hi"]);
+
+    wtr.flush();
+
+    let _cfg_expand = r#"
         {'n': 2,
         'nu_1': 10,
         'nu_2': 6,
@@ -48,7 +61,7 @@ fn main() {
     //change parameters
     //define parameters
     //do json read put parrms in seperate file /Users/sophiaartioli/PIR_project/PIR_project/spiral-rs/spiral-rs/src/bin/client.rs
-    //waht stats to collect
+    //whar stats to collect
     let _cfg_direct = r#"
         {'direct_upload': 1,
         'n': 5,

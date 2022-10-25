@@ -5,24 +5,25 @@ We define a configuration accroding to the databse we are using to simulate the 
 ## Parameters definition
 
 ### Plaintext dimension n
-Let $\lambda$ be a security parameter, the size of the plaintext is denoted by n = n($\lambda$) 
+Let $\lambda$ be a security parameter, the dimension of the plaintext is denoted by n = n($\lambda$) 
+ with the client’s query vectors,
 
 ### Dimensions $\nu_1$ and $\nu_2$ 
 
 The number of records in the database is N = $2^{\nu_1+\nu_2}$
-The database is represented as a  $(\nu_2+1)$-dimensional hypercube with dimensions $2^{\nu_1}×2×2×···×2$. We index elements of the database using either the tuple (i, $𝑗_1$,...,$𝑗_{\nu_2}$) where i ∈ [0, $2^{\nu_1}$ − 1] and
-$𝑗_1$,...,$𝑗_{\nu_2}$ ∈ {0,1}, or the tuple (𝑖,𝑗) where 𝑖 ∈ [0,$2^{\nu_1}$ − 1] and j ∈ [0, $2^{\nu_2}$ − 1]
+The database is represented as a  $(\nu_2+1)$-dimensional hypercube with dimensions $2^{\nu_1}×2×2×···×2$. We index elements of the database using either the tuple (i, $j_1$,...,$j_{\nu_2}$) where i ∈ [0, $2^{\nu_1}$ − 1] and
+$𝑗_1$,...,$𝑗_{\nu_2}$ ∈ {0,1}, or the tuple (i,j) where i ∈ [0,$2^{\nu_1}$ − 1] and j ∈ [0, $2^{\nu_2}$ − 1]
 
 
 ### Plaintext modulus p 
-Let $\lambda$ be a security parameter, the plaintext moulus is denoted by p = p($\lambda$) 
+Let $\lambda$ be a security parameter, the plaintext modulus is denoted by p = p($\lambda$) 
 
 
 ### s_e
 
 
 
-### q2_bits 
+### q2_bits
 Let 𝑞 = 𝑞(𝜆) be an encoding modulus for the query and 𝑞1 = 𝑞1(𝜆), 𝑞2 = 𝑞2(𝜆) be the smaller moduli associated with the PIR response. We require that 𝑞 is odd.
 This can be used for modulus switching to achieve further compression by scaling some components to q1 and remaining components to modulus q2. We can use vers small values of q1 e.g. q1 = 4p. We need a different recovering algorithm that is parametrised by a pair of moduli q1 and q2 ∈ N
 
@@ -42,12 +43,14 @@ Coefficient expansion algortihm
 Coefficient expansion algortihm 
 
 ### instances
+parallelisation
+let db_size_words = instances * trials * num_items * params.poly_len;
+
 
 ### db_item_size
 Size of each item in the database
 
 ## Default parameters
-
 
 
 

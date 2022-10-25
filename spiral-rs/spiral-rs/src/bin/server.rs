@@ -133,7 +133,7 @@ async fn query<'a>(
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     let args: Vec<String> = env::args().collect();
-    println!("{}", &args[1]);
+    println!("bin/server.rs {}", &args[1]);
     let db_preprocessed_path = &args[1];
 
     let cfg_expand = r#"
@@ -151,18 +151,22 @@ async fn main() -> std::io::Result<()> {
         'db_item_size': 100000 }
     "#;
     let box_params = Box::new(params_from_json(&cfg_expand.replace("'", "\"")));
+
     let params: &'static Params = Box::leak(box_params);
+    println!("box leak");
 
     let mut file = File::open(db_preprocessed_path).unwrap();
     let db = load_preprocessed_db_from_file(params, &mut file);
+    println!("load_preprocessed_db_from_file");
 
     let server_state = ServerState {
         params: params,
         db: db,
         pub_params_map: Mutex::new((VecDeque::new(), HashMap::new())),
     };
+    println!("server state");
     let state = web::Data::new(server_state);
-
+    println!("app builder");
     let app_builder = move || {
         let cors = Cors::default()
             .allow_any_origin()
@@ -183,6 +187,8 @@ async fn main() -> std::io::Result<()> {
             .service(query)
             .service(check)
     };
+
+    println!("SERVERRRR LOCAL HOSR");
 
     Server::build()
         .bind("http/1", "localhost:8088", move || {
