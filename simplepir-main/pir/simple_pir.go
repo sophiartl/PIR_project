@@ -131,13 +131,13 @@ func (pi *SimplePIR) Recover(i uint64, batch_index uint64, offline Msg, query Ms
 	H := offline.data[0]
 	ans := answer.data[0]
 
-	ratio := p.p/2
-	offset := uint64(0);
-	for j := uint64(0); j<p.m; j++ {
-        	offset += ratio*query.data[0].Get(j,0)
+	ratio := p.p / 2
+	offset := uint64(0)
+	for j := uint64(0); j < p.m; j++ {
+		offset += ratio * query.data[0].Get(j, 0)
 	}
 	offset %= (1 << p.logq)
-	offset = (1 << p.logq)-offset
+	offset = (1 << p.logq) - offset
 
 	row := i / p.m
 	interm := MatrixMul(H, secret)
