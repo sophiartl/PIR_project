@@ -1,0 +1,1997 @@
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.509171ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 103.577µs
+	Rate: 2421.051715 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.429923ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 146.268µs
+	Rate: 1714.423342 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.258554ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 133.586µs
+	Rate: 1877.182290 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.380035ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 91.565µs
+	Rate: 2738.658586 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.461888ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 106.742µs
+	Rate: 2349.265270 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2220.116241 MB/s
+Std dev of SimplePIR tput, except for first run: 373.970507 MB/s
+goos: linux
+goarch: amd64
+pkg: github.com/ahenzinger/simplepir/pir
+cpu: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz
+BenchmarkSimplePirSingle-112     	Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.571895ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 129.789µs
+	Rate: 1932.099588 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.440522ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 91.793µs
+	Rate: 2731.856170 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.30995ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 132.446µs
+	Rate: 1893.339727 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.68867ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 99.383µs
+	Rate: 2523.221008 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.490767ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 103.191µs
+	Rate: 2430.107989 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2302.124896 MB/s
+Std dev of SimplePIR tput, except for first run: 332.853173 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.664858ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 114.669µs
+	Rate: 2186.861954 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.547648ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 97.146µs
+	Rate: 2581.323713 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.387274ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 152.119µs
+	Rate: 1648.480949 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.403217ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 106.091µs
+	Rate: 2363.680929 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.308187ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 128.502µs
+	Rate: 1951.450355 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2146.359580 MB/s
+Std dev of SimplePIR tput, except for first run: 323.708371 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.428663ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 102.061µs
+	Rate: 2457.013683 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.473619ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 58.852µs
+	Rate: 4260.947350 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.552677ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 64.318µs
+	Rate: 3898.835061 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.40576ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 101.792µs
+	Rate: 2463.506695 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.334067ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 93.567µs
+	Rate: 2680.061063 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 3152.072770 MB/s
+Std dev of SimplePIR tput, except for first run: 770.361237 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.36113ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 64.369µs
+	Rate: 3895.745987 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.615596ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 118.433µs
+	Rate: 2117.359802 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.414714ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 96.391µs
+	Rate: 2601.542400 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.508084ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.84µs
+	Rate: 2486.763918 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.404453ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 156.609µs
+	Rate: 1601.218790 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2540.526179 MB/s
+Std dev of SimplePIR tput, except for first run: 762.181375 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.647415ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 47.928µs
+	Rate: 5232.124717 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.464267ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 111.77µs
+	Rate: 2243.583014 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.616107ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 73.871µs
+	Rate: 3394.637591 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.584646ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 110.484µs
+	Rate: 2269.697635 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.456811ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 110.542µs
+	Rate: 2268.506753 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 3081.709942 MB/s
+Std dev of SimplePIR tput, except for first run: 1161.492797 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.637704ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 98.015µs
+	Rate: 2558.437723 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.597985ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 78.012µs
+	Rate: 3214.444873 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.492412ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 123.464µs
+	Rate: 2031.080100 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.626083ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 98.352µs
+	Rate: 2549.671318 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.347407ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 91.998µs
+	Rate: 2725.768750 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2615.880553 MB/s
+Std dev of SimplePIR tput, except for first run: 379.481112 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.405206ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 114.03µs
+	Rate: 2199.116666 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.515355ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.417µs
+	Rate: 2497.239247 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.727065ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 101.683µs
+	Rate: 2466.147473 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.576549ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 102.944µs
+	Rate: 2435.938699 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 831.372µs
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 106.959µs
+	Rate: 2344.499046 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2388.588226 MB/s
+Std dev of SimplePIR tput, except for first run: 107.615869 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.524576ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 126.924µs
+	Rate: 1975.712028 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.428924ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 102.883µs
+	Rate: 2437.382983 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.50277ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 119.228µs
+	Rate: 2103.241466 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.910205ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 110.066µs
+	Rate: 2278.317314 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.403552ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 123.895µs
+	Rate: 2024.014476 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2163.733653 MB/s
+Std dev of SimplePIR tput, except for first run: 171.199449 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.566428ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 98.61µs
+	Rate: 2543.000441 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.59178ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 56.265µs
+	Rate: 4456.860810 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 741.103µs
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 127.12µs
+	Rate: 1972.665776 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.614475ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 104.097µs
+	Rate: 2408.957736 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.570767ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 101.621µs
+	Rate: 2467.652094 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2769.827371 MB/s
+Std dev of SimplePIR tput, except for first run: 866.548981 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.240906ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 134.085µs
+	Rate: 1870.196319 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.420377ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 98.588µs
+	Rate: 2543.567914 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.618606ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 112.637µs
+	Rate: 2226.313498 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.474236ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 92.238µs
+	Rate: 2718.676396 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.259878ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 104.535µs
+	Rate: 2398.864241 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2351.523674 MB/s
+Std dev of SimplePIR tput, except for first run: 290.267756 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.523821ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.716µs
+	Rate: 2489.825583 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.581713ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 108.446µs
+	Rate: 2312.351525 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.633395ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 96.835µs
+	Rate: 2589.614018 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.427559ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 67.528µs
+	Rate: 3713.500673 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.730612ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 101.189µs
+	Rate: 2478.187090 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2716.695778 MB/s
+Std dev of SimplePIR tput, except for first run: 506.284609 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.315561ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 107.309µs
+	Rate: 2336.852207 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.127937ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 95.57µs
+	Rate: 2623.891111 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.603863ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 123.183µs
+	Rate: 2035.713316 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.523491ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 131.509µs
+	Rate: 1906.829749 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.464006ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 106.718µs
+	Rate: 2349.793600 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2250.615997 MB/s
+Std dev of SimplePIR tput, except for first run: 253.369034 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.259173ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 91.531µs
+	Rate: 2739.675885 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.504822ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 133.272µs
+	Rate: 1881.605089 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.63532ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 122.402µs
+	Rate: 2048.702419 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.458821ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 117.231µs
+	Rate: 2139.069644 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.264937ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 98.327µs
+	Rate: 2550.319581 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2271.874524 MB/s
+Std dev of SimplePIR tput, except for first run: 321.285829 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.530049ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 94.247µs
+	Rate: 2660.724198 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.596877ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 139.043µs
+	Rate: 1803.508796 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.999315ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 118.661µs
+	Rate: 2113.291422 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.35706ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 98.252µs
+	Rate: 2552.266350 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.5245ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 92.291µs
+	Rate: 2717.115141 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2369.381181 MB/s
+Std dev of SimplePIR tput, except for first run: 353.564751 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.472237ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 98.694µs
+	Rate: 2540.836053 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.485701ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 96.48µs
+	Rate: 2599.142552 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.495358ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 102.142µs
+	Rate: 2455.065237 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.317439ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 116.308µs
+	Rate: 2156.044928 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.505865ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.926µs
+	Rate: 2484.644923 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2447.146739 MB/s
+Std dev of SimplePIR tput, except for first run: 153.681161 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.518214ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 95.174µs
+	Rate: 2634.808597 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.443688ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 91.039µs
+	Rate: 2754.481853 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.655182ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 97.682µs
+	Rate: 2567.159492 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.517222ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 120.489µs
+	Rate: 2081.229602 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.469492ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 74.911µs
+	Rate: 3347.509357 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2677.037780 MB/s
+Std dev of SimplePIR tput, except for first run: 406.047694 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.315547ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 101.56µs
+	Rate: 2469.134240 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.591899ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 134.254µs
+	Rate: 1867.842101 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.491604ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.668µs
+	Rate: 2491.012769 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.244216ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 90.992µs
+	Rate: 2755.904623 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.404293ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 103.455µs
+	Rate: 2423.906756 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2401.560098 MB/s
+Std dev of SimplePIR tput, except for first run: 291.026583 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 761.272µs
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 126.311µs
+	Rate: 1985.300358 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.772027ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 142.586µs
+	Rate: 1758.694917 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.503146ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 101.384µs
+	Rate: 2473.420594 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.329467ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 101.736µs
+	Rate: 2464.862718 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.615273ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 77.018µs
+	Rate: 3255.930736 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2387.641864 MB/s
+Std dev of SimplePIR tput, except for first run: 514.723142 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.615359ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 113.764µs
+	Rate: 2204.258583 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.431771ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 101.119µs
+	Rate: 2479.902624 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.412406ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 93.268µs
+	Rate: 2688.652844 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.069745ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 128.021µs
+	Rate: 1958.782336 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.369126ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 60.373µs
+	Rate: 4153.599680 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2697.039213 MB/s
+Std dev of SimplePIR tput, except for first run: 768.978932 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 756.743µs
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 107.505µs
+	Rate: 2332.591726 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.348161ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 104.759µs
+	Rate: 2393.734891 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.459994ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 103.386µs
+	Rate: 2425.524476 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.460649ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 79.301µs
+	Rate: 3162.195602 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.568425ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 103.817µs
+	Rate: 2415.454824 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2545.900304 MB/s
+Std dev of SimplePIR tput, except for first run: 309.832574 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.578033ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 60.935µs
+	Rate: 4115.291269 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 751.571µs
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 126.702µs
+	Rate: 1979.173758 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.591174ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 98.207µs
+	Rate: 2553.435839 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.504574ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 95.944µs
+	Rate: 2613.662902 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.480068ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 102.453µs
+	Rate: 2447.612793 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2741.835312 MB/s
+Std dev of SimplePIR tput, except for first run: 722.014312 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.725008ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 93.825µs
+	Rate: 2672.691430 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.489807ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 101.452µs
+	Rate: 2471.762740 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.455534ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.732µs
+	Rate: 2489.430106 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.430814ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 57.894µs
+	Rate: 4331.455305 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.453076ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 92.773µs
+	Rate: 2702.998431 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2933.667603 MB/s
+Std dev of SimplePIR tput, except for first run: 705.100042 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.550557ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 125.278µs
+	Rate: 2001.670473 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.588979ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 99.916µs
+	Rate: 2509.760934 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.572594ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 93.075µs
+	Rate: 2694.228025 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.463612ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 110.481µs
+	Rate: 2269.759266 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.284502ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 99.499µs
+	Rate: 2520.279334 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2399.139606 MB/s
+Std dev of SimplePIR tput, except for first run: 240.295681 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.492629ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 75.747µs
+	Rate: 3310.563764 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.610504ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 76.786µs
+	Rate: 3265.768154 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.397532ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.765µs
+	Rate: 2488.614831 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.5335ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 127.364µs
+	Rate: 1968.886604 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.777574ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.092µs
+	Rate: 2505.347815 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2707.836234 MB/s
+Std dev of SimplePIR tput, except for first run: 511.795788 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.565021ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 92.508µs
+	Rate: 2710.741487 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.58073ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 98.053µs
+	Rate: 2557.446212 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.460491ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.985µs
+	Rate: 2483.193281 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.515757ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 97.044µs
+	Rate: 2584.036864 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.412773ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 99.043µs
+	Rate: 2531.882853 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2573.460140 MB/s
+Std dev of SimplePIR tput, except for first run: 76.277464 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.552589ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.063µs
+	Rate: 2506.073908 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.437139ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 98.809µs
+	Rate: 2537.878872 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.501459ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 97.53µs
+	Rate: 2571.160396 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.341076ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 106.899µs
+	Rate: 2345.814960 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.506283ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 101.085µs
+	Rate: 2480.736741 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2488.332976 MB/s
+Std dev of SimplePIR tput, except for first run: 77.458383 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.15873ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.921µs
+	Rate: 2484.768021 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.449925ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 103.531µs
+	Rate: 2422.127416 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.395919ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 63.525µs
+	Rate: 3947.505289 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.635883ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.338µs
+	Rate: 2499.205420 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.719547ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.636µs
+	Rate: 2491.804856 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2769.082200 MB/s
+Std dev of SimplePIR tput, except for first run: 589.849023 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.320963ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 107.52µs
+	Rate: 2332.266308 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.543762ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 89.485µs
+	Rate: 2802.316293 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.692007ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 114.474µs
+	Rate: 2190.587150 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.805631ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 93.033µs
+	Rate: 2695.444342 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.423451ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.849µs
+	Rate: 2486.541993 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2501.431217 MB/s
+Std dev of SimplePIR tput, except for first run: 225.226735 MB/s
+Working with: n=1024; db size=2^17 (l=618, m=342); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.250765 MB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.438057ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 143.763µs
+	Rate: 1744.296331 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.527379ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 88.44µs
+	Rate: 2835.428239 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 1.720022ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 100.081µs
+	Rate: 2505.623180 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.470255ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 110.422µs
+	Rate: 2270.972030 MB/s
+		Online download: 2.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 2472 KB
+Original DB dims: Dims: 618-by-342
+After squishing, with compression factor 3: Dims: 618-by-114
+Building query...
+	Elapsed: 2.375467ms
+		Online upload: 1.000000 KB
+Answering query...
+	Elapsed: 98.875µs
+	Rate: 2536.184814 MB/s
+		Online download: 2.000000 KB
+Avg SimplePIR tput, except for first run: 2378.500919 MB/s
+Std dev of SimplePIR tput, except for first run: 364.303384 MB/s
+1000000000	         0.5588 ns/op
+Working with: n=1024; db size=2^23 (l=225, m=65536); logq=32; p=552; sigma=6.400000
+Total packed DB size is ~16.011078 MB
+Executing DoublePIR
+Setup...
+		Offline download: 3686400 KB
+Original DB dims: Dims: 225-by-65536
+After squishing, with compression factor 3: Dims: 225-by-21846
+Building query...
+	Elapsed: 116.325042ms
+		Online upload: 256.000000 KB
+Answering query...
+900-by-1 vs. 3-by-1024
+	Elapsed: 12.981052ms
+	Rate: 1233.419152 MB/s
+		Online download: 7203.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 3686400 KB
+Original DB dims: Dims: 225-by-65536
+After squishing, with compression factor 3: Dims: 225-by-21846
+Building query...
+	Elapsed: 113.051516ms
+		Online upload: 256.000000 KB
+Answering query...
+900-by-1 vs. 3-by-1024
+	Elapsed: 14.278053ms
+	Rate: 1121.376853 MB/s
+		Online download: 7203.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 3686400 KB
+Original DB dims: Dims: 225-by-65536
+After squishing, with compression factor 3: Dims: 225-by-21846
+Building query...
+	Elapsed: 126.678953ms
+		Online upload: 256.000000 KB
+Answering query...
+900-by-1 vs. 3-by-1024
+	Elapsed: 12.849607ms
+	Rate: 1246.036408 MB/s
+		Online download: 7203.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 3686400 KB
+Original DB dims: Dims: 225-by-65536
+After squishing, with compression factor 3: Dims: 225-by-21846
+Building query...
+	Elapsed: 120.136238ms
+		Online upload: 256.000000 KB
+Answering query...
+900-by-1 vs. 3-by-1024
+	Elapsed: 13.631554ms
+	Rate: 1174.560006 MB/s
+		Online download: 7203.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 3686400 KB
+Original DB dims: Dims: 225-by-65536
+After squishing, with compression factor 3: Dims: 225-by-21846
+Building query...
+	Elapsed: 113.149783ms
+		Online upload: 256.000000 KB
+Answering query...
+900-by-1 vs. 3-by-1024
+	Elapsed: 15.883148ms
+	Rate: 1008.054458 MB/s
+		Online download: 7203.000000 KB
+Avg DoublePIR tput, except for first run: 1156.689375 MB/s
+Std dev of DoublePIR tput, except for first run: 86.636047 MB/s
+BenchmarkDoublePirSingle-112     	       1	47953544332 ns/op
+PASS
+ok  	github.com/ahenzinger/simplepir/pir	64.976s
