@@ -1,0 +1,141 @@
+Working with: n=1024; db size=2^28 (l=24737, m=16384); logq=32; p=833; sigma=6.400000
+Total packed DB size is ~468.755167 MB
+Executing SimplePIR
+Setup...
+		Offline download: 98948 KB
+Original DB dims: Dims: 24737-by-16384
+After squishing, with compression factor 3: Dims: 24737-by-5462
+Building query...
+	Elapsed: 27.945978ms
+		Online upload: 64.000000 KB
+Answering query...
+	Elapsed: 47.938006ms
+	Rate: 9778.361816 MB/s
+		Online download: 96.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 98948 KB
+Original DB dims: Dims: 24737-by-16384
+After squishing, with compression factor 3: Dims: 24737-by-5462
+Building query...
+	Elapsed: 27.6241ms
+		Online upload: 64.000000 KB
+Answering query...
+	Elapsed: 61.534697ms
+	Rate: 7617.737476 MB/s
+		Online download: 96.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 98948 KB
+Original DB dims: Dims: 24737-by-16384
+After squishing, with compression factor 3: Dims: 24737-by-5462
+Building query...
+	Elapsed: 27.677402ms
+		Online upload: 64.000000 KB
+Answering query...
+	Elapsed: 59.466535ms
+	Rate: 7882.671614 MB/s
+		Online download: 96.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 98948 KB
+Original DB dims: Dims: 24737-by-16384
+After squishing, with compression factor 3: Dims: 24737-by-5462
+Building query...
+	Elapsed: 27.990104ms
+		Online upload: 64.000000 KB
+Answering query...
+	Elapsed: 58.002367ms
+	Rate: 8081.655830 MB/s
+		Online download: 96.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 98948 KB
+Original DB dims: Dims: 24737-by-16384
+After squishing, with compression factor 3: Dims: 24737-by-5462
+Building query...
+	Elapsed: 29.436952ms
+		Online upload: 64.000000 KB
+Answering query...
+	Elapsed: 57.500587ms
+	Rate: 8152.180558 MB/s
+		Online download: 96.000000 KB
+Avg SimplePIR tput, except for first run: 8302.521459 MB/s
+Std dev of SimplePIR tput, except for first run: 760.879986 MB/s
+goos: linux
+goarch: amd64
+pkg: github.com/ahenzinger/simplepir/pir
+cpu: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz
+BenchmarkSimplePirSingle-112     	       1	80994493195 ns/op
+Working with: n=1024; db size=2^30 (l=26349, m=65536); logq=32; p=552; sigma=6.400000
+Total packed DB size is ~1875.003991 MB
+Executing DoublePIR
+Setup...
+		Offline download: 431702016 KB
+Original DB dims: Dims: 26349-by-65536
+After squishing, with compression factor 3: Dims: 26349-by-21846
+Building query...
+	Elapsed: 111.804983ms
+		Online upload: 256.000000 KB
+Answering query...
+105396-by-1 vs. 3-by-1024
+	Elapsed: 803.424292ms
+	Rate: 2333.765621 MB/s
+		Online download: 843579.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 431702016 KB
+Original DB dims: Dims: 26349-by-65536
+After squishing, with compression factor 3: Dims: 26349-by-21846
+Building query...
+	Elapsed: 111.415113ms
+		Online upload: 256.000000 KB
+Answering query...
+105396-by-1 vs. 3-by-1024
+	Elapsed: 657.099675ms
+	Rate: 2853.454450 MB/s
+		Online download: 843579.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 431702016 KB
+Original DB dims: Dims: 26349-by-65536
+After squishing, with compression factor 3: Dims: 26349-by-21846
+Building query...
+	Elapsed: 113.057087ms
+		Online upload: 256.000000 KB
+Answering query...
+105396-by-1 vs. 3-by-1024
+	Elapsed: 652.960501ms
+	Rate: 2871.542748 MB/s
+		Online download: 843579.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 431702016 KB
+Original DB dims: Dims: 26349-by-65536
+After squishing, with compression factor 3: Dims: 26349-by-21846
+Building query...
+	Elapsed: 112.60419ms
+		Online upload: 256.000000 KB
+Answering query...
+105396-by-1 vs. 3-by-1024
+	Elapsed: 660.555864ms
+	Rate: 2838.524482 MB/s
+		Online download: 843579.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 431702016 KB
+Original DB dims: Dims: 26349-by-65536
+After squishing, with compression factor 3: Dims: 26349-by-21846
+Building query...
+	Elapsed: 132.583701ms
+		Online upload: 256.000000 KB
+Answering query...
+105396-by-1 vs. 3-by-1024
+	Elapsed: 646.021491ms
+	Rate: 2902.386403 MB/s
+		Online download: 843579.000000 KB
+Avg DoublePIR tput, except for first run: 2759.934741 MB/s
+Std dev of DoublePIR tput, except for first run: 214.145383 MB/s
+BenchmarkDoublePirSingle-112     	       1	465693434910 ns/op
+PASS
+ok  	github.com/ahenzinger/simplepir/pir	546.840s
