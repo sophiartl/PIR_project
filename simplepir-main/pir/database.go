@@ -1,7 +1,9 @@
 package pir
 
-import "math"
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 type DBinfo struct {
 	N          uint64 // number of DB entries.
@@ -11,13 +13,13 @@ type DBinfo struct {
 	ne      uint64 // number of Z_p elems per DB entry, if DB entry size > log(p).
 
 	x uint64 // tunable param that governs communication,
-	         // must be in range [1, ne] and must be a divisor of ne;
-	         // represents the number of times the scheme is repeated.
+	// must be in range [1, ne] and must be a divisor of ne;
+	// represents the number of times the scheme is repeated.
 	p    uint64 // plaintext modulus.
 	logq uint64 // (logarithm of) ciphertext modulus.
 
 	// For in-memory DB compression
-	basis     uint64 
+	basis     uint64
 	squishing uint64
 	cols      uint64
 }
@@ -32,7 +34,7 @@ func (DB *Database) Squish() {
 	DB.data.Dim()
 
 	DB.info.basis = 10
-	DB.info.squishing = 3 
+	DB.info.squishing = 3
 	DB.info.cols = DB.data.cols
 	DB.data.Squish(DB.info.basis, DB.info.squishing)
 
@@ -40,7 +42,7 @@ func (DB *Database) Squish() {
 	DB.data.Dim()
 
 	// Check that params allow for this compression
-	if (DB.info.p > (1 << DB.info.basis)) || (DB.info.logq < DB.info.basis * DB.info.squishing) {
+	if (DB.info.p > (1 << DB.info.basis)) || (DB.info.logq < DB.info.basis*DB.info.squishing) {
 		panic("Bad params")
 	}
 }
@@ -95,12 +97,11 @@ func (DB *Database) GetElem(i uint64) uint64 {
 func ApproxSquareDatabaseDims(N, row_length, p uint64) (uint64, uint64) {
 	db_elems, elems_per_entry, _ := Num_DB_entries(N, row_length, p)
 	l := uint64(math.Floor(math.Sqrt(float64(db_elems))))
-
 	rem := l % elems_per_entry
+
 	if rem != 0 {
 		l += elems_per_entry - rem
 	}
-
 	m := uint64(math.Ceil(float64(db_elems) / float64(l)))
 
 	return l, m
