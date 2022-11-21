@@ -7,7 +7,6 @@ use spiral_rs::server::*;
 use spiral_rs::util::*;
 use std::env;
 use std::fs;
-use std::fs::OpenOptions;
 use std::time::Instant;
 
 fn print_params_summary(params: &Params) {
@@ -42,7 +41,8 @@ fn main() {
         "db_item_size": 2048
     }
 "#;
-
+    let mut target_num_log2: usize = 0;
+    let mut item_size_bytes: usize = 0;
     if args.len() == 2 {
         //input parameter file
         let inp_params_fname = &args[1];
@@ -50,8 +50,9 @@ fn main() {
         params = params_from_json(&params_store_str.replace("'", "\""));
     } else {
         // get predefined parameters
-        let target_num_log2: usize = args[1].parse().unwrap(); // power of 2 DB size
-        let item_size_bytes: usize = args[2].parse().unwrap();
+        target_num_log2 = args[1].parse().unwrap(); // power of 2 DB size
+        item_size_bytes = args[2].parse().unwrap();
+        println!("hola {}", item_size_bytes);
 
         params = get_params_from_store(target_num_log2, item_size_bytes);
     }
@@ -101,22 +102,44 @@ fn main() {
     }
 
     println!("completed correctly!");
-    let mut file = OpenOptions::new()
-        .write(true)
-        .append(true)
-        .open("results.csv")
-        .unwrap();
-    let mut wtr = csv::Writer::from_writer(file);
 
-    wtr.write_record(&[
-        params.num_items().to_string(),
+    let data = format!(
+        "
+    n={}; db size={}; entry size ={}; 
+    public parameter size={} bytes;
+    query_size={} bytes; query generation time={} us;
+    answer size={} bytes; query processing time={} us;
+    decoding time={}.
+    -----------------------------------------------------------------------------------------------------------------
+    ",
+        target_num_log2,
+        params.num_items().to_string(), 
+        item_size_bytes,
         params.item_size().to_string(),
         pub_params_buf.len().to_string(),
         query_buf.len().to_string(),
-        end.to_string(),
         response.len().to_string(),
+        end.to_string(),
         end_dec.to_string(),
-    ]);
+    );
+    fs::write("console.txt", data).expect("Unable to write file");
 
-    wtr.flush();
+    // let file = OpenOptions::new()
+    //     .write(true)
+    //     .append(true)
+    //     .open("results.csv")
+    //     .unwrap();
+    // let mut wtr = csv::Writer::from_writer(file);
+
+    // wtr.write_record(&[
+    // params.num_items().to_string(),
+    // params.item_size().to_string(),
+    // pub_params_buf.len().to_string(),
+    // query_buf.len().to_string(),
+    // end.to_string(),
+    // response.len().to_string(),
+    // end_dec.to_string(),
+    // ]);
+
+    // wtr.flush();
 }
