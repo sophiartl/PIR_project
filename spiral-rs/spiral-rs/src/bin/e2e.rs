@@ -73,7 +73,9 @@ fn main() {
     let pub_params = client.generate_keys();
     let pub_params_buf = pub_params.serialize();
     println!("public parameters size: {} bytes", pub_params_buf.len());
+    let now_gen = Instant::now();
     let query = client.generate_query(idx_target);
+    let time_gen = now_gen.elapsed().as_micros();
     let query_buf = query.serialize();
     println!("initial query size: {} bytes", query_buf.len());
 
@@ -105,24 +107,27 @@ fn main() {
 
     let data = format!(
         "
-    n={}; db size={}; entry size ={}; 
+    n={}; db size={}; entry size ={}; record size ={};
     public parameter size={} bytes;
     query_size={} bytes; query generation time={} us;
     answer size={} bytes; query processing time={} us;
     decoding time={}.
-    -----------------------------------------------------------------------------------------------------------------
     ",
         target_num_log2,
-        params.num_items().to_string(), 
+        params.num_items().to_string(),
         item_size_bytes,
         params.item_size().to_string(),
         pub_params_buf.len().to_string(),
         query_buf.len().to_string(),
+        time_gen,
         response.len().to_string(),
         end.to_string(),
         end_dec.to_string(),
     );
-    fs::write("console.txt", data).expect("Unable to write file");
+
+    let path_to: String = format!("spiral-{}_{}.txt", target_num_log2, item_size_bytes);
+
+    fs::write(path_to, data).expect("Unable to write file");
 
     // let file = OpenOptions::new()
     //     .write(true)
