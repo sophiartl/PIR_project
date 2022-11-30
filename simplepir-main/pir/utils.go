@@ -72,7 +72,7 @@ func Reconstruct_from_base_p(p uint64, vals []uint64) uint64 {
 // Returns how many entries in Z_p are needed to represent an element in Z_q
 func Compute_num_entries_base_p(p, log_q uint64) uint64 {
 	log_p := math.Log2(float64(p))
-	return uint64(math.Ceil(float64(log_q) /  ))
+	return uint64(math.Ceil(float64(log_q) / log_p))
 }
 
 // Returns how many Z_p elements are needed to represent a database of N entries,
