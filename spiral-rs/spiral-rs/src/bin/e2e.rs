@@ -52,7 +52,7 @@ fn main() {
         // get predefined parameters
         target_num_log2 = args[1].parse().unwrap(); // power of 2 DB size
         item_size_bytes = args[2].parse().unwrap();
-        println!("hola {}", item_size_bytes);
+        // println!("hola {}", item_size_bytes);
 
         params = get_params_from_store(target_num_log2, item_size_bytes);
     }

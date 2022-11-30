@@ -8,16 +8,6 @@ use std::time::Instant;
 
 fn main() {
     // do so that we can get our own json file from command line
-    let mut file = OpenOptions::new()
-        .write(true)
-        .append(true)
-        .open("results.csv")
-        .unwrap();
-    let mut wtr = csv::Writer::from_writer(file);
-
-    wtr.write_record(&["helloe".to_string(), 4.to_string()]);
-
-    wtr.flush();
 
     let base_params = params_from_json(&CFG_10_256.replace("'", "\""));
 
