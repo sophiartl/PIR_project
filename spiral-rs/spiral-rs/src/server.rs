@@ -353,7 +353,7 @@ pub fn generate_random_db_and_get_item<'a>(
     let num_items = dim0 * num_per;
     let db_size_words = instances * trials * num_items * params.poly_len;
     let mut v = AlignedMemory64::new(db_size_words);
-
+    println!("in fucntion 1");
     let mut item = PolyMatrixRaw::zero(params, params.instances * params.n, params.n);
 
     for instance in 0..instances {
@@ -364,6 +364,7 @@ pub fn generate_random_db_and_get_item<'a>(
 
                 let mut db_item = PolyMatrixRaw::random_rng(params, 1, 1, &mut rng);
                 db_item.reduce_mod(params.pt_modulus);
+                println!("in function 2");
 
                 if i == item_idx {
                     item.copy_into(
@@ -372,11 +373,13 @@ pub fn generate_random_db_and_get_item<'a>(
                         trial % params.n,
                     );
                 }
+                println!("in function 3");
 
                 for z in 0..params.poly_len {
                     db_item.data[z] =
                         recenter_mod(db_item.data[z], params.pt_modulus, params.modulus);
                 }
+                println!("in function 4");
 
                 let db_item_ntt = db_item.ntt();
                 for z in 0..params.poly_len {
@@ -388,6 +391,7 @@ pub fn generate_random_db_and_get_item<'a>(
                     v[idx_dst] = db_item_ntt.data[z]
                         | (db_item_ntt.data[params.poly_len + z] << PACKED_OFFSET_2);
                 }
+                println!("in function 5");
             }
         }
     }
