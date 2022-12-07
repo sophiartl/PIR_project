@@ -2463,5 +2463,22 @@
             "instances": 114,
             "db_item_size": 1050624
         }
+    },
+    {
+        "target_num": 22,
+        "item_size": 256,
+        "params": {
+            "n": 2,
+            "nu_1": 11,
+            "nu_2": 11,
+            "p": 4,
+            "q2_bits": 22,
+            "t_gsw": 12,
+            "t_conv": 16,
+            "t_exp_left": 32,
+            "t_exp_right": 56,
+            "instances": 1,
+            "db_item_size": 2048
+        }
     }
 ]

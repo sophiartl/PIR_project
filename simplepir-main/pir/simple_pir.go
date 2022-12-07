@@ -96,6 +96,8 @@ func (pi *SimplePIR) Query(i uint64, shared State, p Params, info DBinfo) (State
 
 	// Pad the query to match the dimensions of the compressed DB
 	if p.m%info.squishing != 0 {
+		//append zeroes under matrix
+
 		query.AppendZeros(info.squishing - (p.m % info.squishing))
 	}
 
