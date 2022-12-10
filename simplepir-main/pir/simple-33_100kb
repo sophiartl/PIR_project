@@ -1,0 +1,23 @@
+--- FAIL: TestSimplePirBW (0.00s)
+panic: runtime error: index out of range [1] with length 1 [recovered]
+	panic: runtime error: index out of range [1] with length 1
+
+goroutine 6 [running]:
+testing.tRunner.func1.2({0x535b00, 0xc00001a0a8})
+	/usr/local/go/src/testing/testing.go:1389 +0x24e
+testing.tRunner.func1()
+	/usr/local/go/src/testing/testing.go:1392 +0x39f
+panic({0x535b00, 0xc00001a0a8})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ahenzinger/simplepir/pir.(*Params).PickParams(0xc000148d58, 0x0, {0xc000148d20?, 0x10000004b8c53?, 0xef00000000625400?})
+	/home/sartioli/pir_project/PIR_project/simplepir-main/pir/params.go:53 +0x44f
+github.com/ahenzinger/simplepir/pir.(*SimplePIR).PickParams(0xc00001400a?, 0x6?, 0x5849f4?, 0x400, 0x20)
+	/home/sartioli/pir_project/PIR_project/simplepir-main/pir/simple_pir.go:28 +0x148
+github.com/ahenzinger/simplepir/pir.TestSimplePirBW(0x0?)
+	/home/sartioli/pir_project/PIR_project/simplepir-main/pir/pir_test.go:90 +0xc5
+testing.tRunner(0xc00017ad00, 0x54dac0)
+	/usr/local/go/src/testing/testing.go:1439 +0x102
+created by testing.(*T).Run
+	/usr/local/go/src/testing/testing.go:1486 +0x35f
+exit status 2
+FAIL	github.com/ahenzinger/simplepir/pir	0.010s
