@@ -263,12 +263,20 @@ func BenchmarkSimplePirSingle(b *testing.B) {
 
 	DB := MakeRandomDB(N, d, &p)
 	var tputs []float64
+	var processing []float64
+	var gener []float64
+
 	for j := 0; j < 5; j++ {
-		tput, _, _, _ := RunFakePIR(&pir, DB, p, []uint64{i}, f, false)
+		tput, _, _, _, time_query_generation, time_query_processing := RunFakePIR(&pir, DB, p, []uint64{i}, f, false)
 		tputs = append(tputs, tput)
+		gener = append(gener, float64(time_query_generation))
+		processing = append(processing, float64(time_query_processing))
 	}
-	fmt.Printf("Avg SimplePIR tput, except for first run: %f MB/s\n", avg(tputs))
-	fmt.Printf("Std dev of SimplePIR tput, except for first run: %f MB/s\n", stddev(tputs))
+	// fmt.Printf("Avg SimplePIR tput, except for first run: %f MB/s\n", avg(tputs))
+	// fmt.Printf("Std dev of SimplePIR tput, except for first run: %f MB/s\n", stddev(tputs))
+	fmt.Printf("Avg SimplePIR time query generation nanoseconds: %f s\n", avg(gener))
+	fmt.Printf("Avg SimplePIR time query processing nanoseconds: %f s\n", avg(processing))
+
 }
 
 // Benchmark DoublePIR performance.
@@ -300,12 +308,19 @@ func BenchmarkDoublePirSingle(b *testing.B) {
 
 	DB := MakeRandomDB(N, d, &p)
 	var tputs []float64
+	var processing []float64
+	var gener []float64
+
 	for j := 0; j < 5; j++ {
-		tput, _, _, _ := RunFakePIR(&pir, DB, p, []uint64{i}, f, false)
+		tput, _, _, _, time_query_generation, time_query_processing := RunFakePIR(&pir, DB, p, []uint64{i}, f, false)
 		tputs = append(tputs, tput)
+		gener = append(gener, float64(time_query_generation))
+		processing = append(processing, float64(time_query_processing))
 	}
-	fmt.Printf("Avg DoublePIR tput, except for first run: %f MB/s\n", avg(tputs))
-	fmt.Printf("Std dev of DoublePIR tput, except for first run: %f MB/s\n", stddev(tputs))
+	// fmt.Printf("Avg SimplePIR tput, except for first run: %f MB/s\n", avg(tputs))
+	// fmt.Printf("Std dev of SimplePIR tput, except for first run: %f MB/s\n", stddev(tputs))
+	fmt.Printf("Avg SimplePIR time query generation nanoseconds: %f s\n", avg(gener))
+	fmt.Printf("Avg SimplePIR time query processing nanoseconds: %f s\n", avg(processing))
 }
 
 // Benchmark SimplePIR performance, on 1GB databases with increasing row length.
@@ -341,14 +356,20 @@ func BenchmarkSimplePirVaryingDB(b *testing.B) {
 		var offline_cs []float64
 		var online_cs []float64
 
+		var processing []float64
+		var gener []float64
+
 		for j := 0; j < 5; j++ {
-			tput, _, offline_c, online_c := RunFakePIR(&pir, DB, p, []uint64{i}, nil, false)
+			tput, _, _, _, time_query_generation, time_query_processing := RunFakePIR(&pir, DB, p, []uint64{i}, nil, false)
 			tputs = append(tputs, tput)
-			offline_cs = append(offline_cs, offline_c)
-			online_cs = append(online_cs, online_c)
+			gener = append(gener, float64(time_query_generation))
+			processing = append(processing, float64(time_query_processing))
 		}
-		fmt.Printf("Avg SimplePIR tput (%d, %d), except for first run: %f MB/s\n", N, d, avg(tputs))
-		fmt.Printf("Std dev of SimplePIR tput (%d, %d), except for first run: %f MB/s\n", N, d, stddev(tputs))
+		// fmt.Printf("Avg SimplePIR tput, except for first run: %f MB/s\n", avg(tputs))
+		// fmt.Printf("Std dev of SimplePIR tput, except for first run: %f MB/s\n", stddev(tputs))
+		fmt.Printf("Avg SimplePIR time query generation nanoseconds: %f s\n", avg(gener))
+		fmt.Printf("Avg SimplePIR time query processing nanoseconds: %f s\n", avg(processing))
+
 		if (stddev(offline_cs) != 0) || (stddev(online_cs) != 0) {
 			fmt.Printf("%f %f SHOULD NOT HAPPEN\n", stddev(offline_cs), stddev(online_cs))
 			//panic("Should not happen!")
@@ -394,14 +415,20 @@ func BenchmarkDoublePirVaryingDB(b *testing.B) {
 		var offline_cs []float64
 		var online_cs []float64
 
+		var processing []float64
+		var gener []float64
+
 		for j := 0; j < 5; j++ {
-			tput, _, offline_c, online_c := RunFakePIR(&pir, DB, p, []uint64{i}, nil, false)
+			tput, _, _, _, time_query_generation, time_query_processing := RunFakePIR(&pir, DB, p, []uint64{i}, nil, false)
 			tputs = append(tputs, tput)
-			offline_cs = append(offline_cs, offline_c)
-			online_cs = append(online_cs, online_c)
+			gener = append(gener, float64(time_query_generation))
+			processing = append(processing, float64(time_query_processing))
 		}
-		fmt.Printf("Avg SimplePIR tput (%d, %d), except for first run: %f MB/s\n", N, d, avg(tputs))
-		fmt.Printf("Std dev of SimplePIR tput (%d, %d), except for first run: %f MB/s\n", N, d, stddev(tputs))
+		// fmt.Printf("Avg SimplePIR tput, except for first run: %f MB/s\n", avg(tputs))
+		// fmt.Printf("Std dev of SimplePIR tput, except for first run: %f MB/s\n", stddev(tputs))
+		fmt.Printf("Avg SimplePIR time query generation nanoseconds: %f s\n", avg(gener))
+		fmt.Printf("Avg SimplePIR time query processing nanoseconds: %f s\n", avg(processing))
+
 		if (stddev(offline_cs) != 0) || (stddev(online_cs) != 0) {
 			fmt.Printf("%f %f SHOULD NOT HAPPEN\n", stddev(offline_cs), stddev(online_cs))
 			//panic("Should not happen!")
@@ -464,7 +491,7 @@ func BenchmarkSimplePirBatchLarge(b *testing.B) {
 		}
 		var tputs []float64
 		for iter := 0; iter < 5; iter++ {
-			tput, _, _, _ := RunFakePIR(&pir, DB, p, query, f, false)
+			tput, _, _, _, _, _ := RunFakePIR(&pir, DB, p, query, f, false)
 			tputs = append(tputs, tput)
 		}
 
@@ -530,7 +557,7 @@ func BenchmarkDoublePirBatchLarge(b *testing.B) {
 		}
 		var tputs []float64
 		for iter := 0; iter < 5; iter++ {
-			tput, _, _, _ := RunFakePIR(&pir, DB, p, query, f, false)
+			tput, _, _, _, _, _ := RunFakePIR(&pir, DB, p, query, f, false)
 			tputs = append(tputs, tput)
 		}
 		expected_num_empty_buckets := math.Pow(float64(batch_sz-1)/float64(batch_sz), float64(batch_sz)) * float64(batch_sz)

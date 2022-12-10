@@ -7,7 +7,7 @@ import (
 	"runtime/debug"
 	"runtime/pprof"
 	"time"
-//	"math"
+	// "math"
 )
 
 // Defines the interface for PIR with preprocessing schemes
@@ -35,8 +35,8 @@ type PIR interface {
 
 // Run PIR's online phase, with a random preprocessing (to skip the offline phase).
 // Gives accurate bandwidth and online time measurements.
-func RunFakePIR(pi PIR, DB *Database, p Params, i []uint64, 
-                f *os.File, profile bool) (float64, float64, float64, float64) {
+func RunFakePIR(pi PIR, DB *Database, p Params, i []uint64,
+	f *os.File, profile bool) (float64, float64, float64, float64, int64, int64) {
 	fmt.Printf("Executing %s\n", pi.Name())
 	//fmt.Printf("Memory limit: %d\n", debug.SetMemoryLimit(math.MaxInt64))
 	debug.SetGCPercent(-1)
@@ -59,7 +59,7 @@ func RunFakePIR(pi PIR, DB *Database, p Params, i []uint64,
 		_, q := pi.Query(i[index], shared_state, p, DB.info)
 		query.data = append(query.data, q)
 	}
-	printTime(start)
+	time_query_generation := printTime(start)
 	online_comm := float64(query.size() * uint64(p.logq) / (8.0 * 1024.0))
 	fmt.Printf("\t\tOnline upload: %f KB\n", online_comm)
 	bw += online_comm
@@ -71,11 +71,12 @@ func RunFakePIR(pi PIR, DB *Database, p Params, i []uint64,
 	}
 	start = time.Now()
 	answer := pi.Answer(DB, query, server_state, shared_state, p)
-	elapsed := printTime(start)
+	time_query_processing := printTime(start)
+
 	if profile {
 		pprof.StopCPUProfile()
 	}
-	rate := printRate(p, elapsed, len(i))
+	rate := printRate(p, time_query_processing, len(i))
 	online_down := float64(answer.size() * uint64(p.logq) / (8.0 * 1024.0))
 	fmt.Printf("\t\tOnline download: %f KB\n", online_down)
 	bw += online_down
@@ -85,11 +86,11 @@ func RunFakePIR(pi PIR, DB *Database, p Params, i []uint64,
 	debug.SetGCPercent(100)
 	pi.Reset(DB, p)
 
-	if offline_comm + online_comm != bw {
+	if offline_comm+online_comm != bw {
 		panic("Should not happen!")
 	}
 
-	return rate, bw, offline_comm, online_comm
+	return rate, bw, offline_comm, online_comm, int64(time_query_generation), int64(time_query_processing)
 }
 
 // Run full PIR scheme (offline + online phases).
@@ -149,9 +150,9 @@ func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64) {
 
 	for index, _ := range i {
 		index_to_query := i[index] + uint64(index)*batch_sz
-		val := pi.Recover(index_to_query, uint64(index), offline_download, 
-		                  query.data[index], answer, shared_state,
-			          client_state[index], p, DB.info)
+		val := pi.Recover(index_to_query, uint64(index), offline_download,
+			query.data[index], answer, shared_state,
+			client_state[index], p, DB.info)
 
 		if DB.GetElem(index_to_query) != val {
 			fmt.Printf("Batch %d (querying index %d -- row should be >= %d): Got %d instead of %d\n",
