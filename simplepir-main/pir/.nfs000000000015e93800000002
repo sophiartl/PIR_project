@@ -1,0 +1,75 @@
+Working with: n=1024; db size=2^33 (l=123552, m=116509); logq=32; p=495; sigma=6.400000
+Total packed DB size is ~15360.477815 MB
+Executing SimplePIR
+Setup...
+		Offline download: 494208 KB
+Original DB dims: Dims: 123552-by-116509
+After squishing, with compression factor 3: Dims: 123552-by-38837
+Building query...
+	Elapsed: 214.273297ms
+		Online upload: 455.000000 KB
+Answering query...
+	Elapsed: 1.872736329s
+	Rate: 8202.157227 MB/s
+		Online download: 482.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 494208 KB
+Original DB dims: Dims: 123552-by-116509
+After squishing, with compression factor 3: Dims: 123552-by-38837
+Building query...
+	Elapsed: 213.991155ms
+		Online upload: 455.000000 KB
+Answering query...
+	Elapsed: 1.755638364s
+	Rate: 8749.226566 MB/s
+		Online download: 482.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 494208 KB
+Original DB dims: Dims: 123552-by-116509
+After squishing, with compression factor 3: Dims: 123552-by-38837
+Building query...
+	Elapsed: 214.142534ms
+		Online upload: 455.000000 KB
+Answering query...
+	Elapsed: 1.740777933s
+	Rate: 8823.915747 MB/s
+		Online download: 482.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 494208 KB
+Original DB dims: Dims: 123552-by-116509
+After squishing, with compression factor 3: Dims: 123552-by-38837
+Building query...
+	Elapsed: 216.206049ms
+		Online upload: 455.000000 KB
+Answering query...
+	Elapsed: 2.063963592s
+	Rate: 7442.223242 MB/s
+		Online download: 482.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 494208 KB
+Original DB dims: Dims: 123552-by-116509
+After squishing, with compression factor 3: Dims: 123552-by-38837
+Building query...
+	Elapsed: 214.56011ms
+		Online upload: 455.000000 KB
+Answering query...
+	Elapsed: 1.742137516s
+	Rate: 8817.029467 MB/s
+		Online download: 482.000000 KB
+Avg SimplePIR tput, except for first run: 8406.910450 MB/s
+Std dev of SimplePIR tput, except for first run: 535.129263 MB/s
+goos: linux
+goarch: amd64
+pkg: github.com/ahenzinger/simplepir/pir
+cpu: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz
+BenchmarkSimplePirSingle-112     	       1	2601803353344 ns/op
+Working with: n=1024; db size=2^33 (l=124857, m=116509); logq=32; p=464; sigma=6.400000
+Total packed DB size is ~15360.919539 MB
+Executing DoublePIR
+Setup...
+		Offline download: 227295232 KB
+Original DB dims: Dims: 124857-by-116509
