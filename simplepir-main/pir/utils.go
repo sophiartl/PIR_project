@@ -1,7 +1,6 @@
 package pir
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -83,9 +82,7 @@ func Num_DB_entries(N, row_length, p uint64) (uint64, uint64, uint64) {
 		logp := uint64(math.Log2(float64(p)))
 		entries_per_elem := logp / row_length
 		db_entries := uint64(math.Ceil(float64(N) / float64(entries_per_elem)))
-		fmt.Printf("----- In Num_db_entries logp is %d, entries/elem is %d, db_entries is %d", logp, entries_per_elem, db_entries)
 		if db_entries == 0 || db_entries > N {
-			fmt.Printf("Num entries is %d; N is %d\n", db_entries, N)
 			panic("Should not happen")
 		}
 		return db_entries, 1, entries_per_elem
