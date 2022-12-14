@@ -388,7 +388,6 @@ pub fn generate_random_db_and_get_item<'a>(
                     v[idx_dst] = db_item_ntt.data[z]
                         | (db_item_ntt.data[params.poly_len + z] << PACKED_OFFSET_2);
                 }
-                println!("its working");
             }
         }
     }
