@@ -1,0 +1,122 @@
+Working with: n=1024; db size=2^32 (l=71232, m=65536); logq=32; p=589; sigma=6.400000
+Total packed DB size is ~5120.981908 MB
+Executing SimplePIR
+Setup...
+		Offline download: 284928 KB
+Original DB dims: Dims: 71232-by-65536
+After squishing, with compression factor 3: Dims: 71232-by-21846
+Building query...
+	Elapsed for ansering query answer: 125.185366ms
+		Online upload: 256.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 546.538908ms
+	Rate: 9369.839609 MB/s
+	Time : 9369.839609 MB/s
+		Online download: 278.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 284928 KB
+Original DB dims: Dims: 71232-by-65536
+After squishing, with compression factor 3: Dims: 71232-by-21846
+Building query...
+	Elapsed for ansering query answer: 111.627871ms
+		Online upload: 256.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 824.854455ms
+	Rate: 6208.346063 MB/s
+	Time : 6208.346063 MB/s
+		Online download: 278.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 284928 KB
+Original DB dims: Dims: 71232-by-65536
+After squishing, with compression factor 3: Dims: 71232-by-21846
+Building query...
+	Elapsed for ansering query answer: 111.073604ms
+		Online upload: 256.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 576.121244ms
+	Rate: 8888.722576 MB/s
+	Time : 8888.722576 MB/s
+		Online download: 278.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 284928 KB
+Original DB dims: Dims: 71232-by-65536
+After squishing, with compression factor 3: Dims: 71232-by-21846
+Building query...
+	Elapsed for ansering query answer: 125.08028ms
+		Online upload: 256.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 564.644243ms
+	Rate: 9069.395414 MB/s
+	Time : 9069.395414 MB/s
+		Online download: 278.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 284928 KB
+Original DB dims: Dims: 71232-by-65536
+After squishing, with compression factor 3: Dims: 71232-by-21846
+Building query...
+	Elapsed for ansering query answer: 121.734863ms
+		Online upload: 256.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 849.218229ms
+	Rate: 6030.230785 MB/s
+	Time : 6030.230785 MB/s
+		Online download: 278.000000 KB
+Avg SimplePIR time query generation nanoseconds: 118940396.800000 s
+Avg SimplePIR time query processing nanoseconds: 672275415.800000 s
+goos: linux
+goarch: amd64
+pkg: github.com/ahenzinger/simplepir/pir
+cpu: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz
+BenchmarkSimplePirSingle-112     	       1	974801134288 ns/op
+Working with: n=1024; db size=2^32 (l=74000, m=65536); logq=32; p=464; sigma=6.400000
+Total packed DB size is ~5121.020263 MB
+Executing DoublePIR
+Setup...
+		Offline download: 75776000 KB
+Original DB dims: Dims: 74000-by-65536
+After squishing, with compression factor 3: Dims: 74000-by-21846
+Building query...
+	Elapsed for ansering query answer: 124.570338ms
+		Online upload: 256.000000 KB
+Answering query...
+18500-by-6 vs. 18-by-1024
+	Elapsed for ansering query answer: 1.143051151s
+	Rate: 4480.132196 MB/s
+	Time : 4480.132196 MB/s
+		Online download: 148072.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 75776000 KB
+Original DB dims: Dims: 74000-by-65536
+After squishing, with compression factor 3: Dims: 74000-by-21846
+Building query...
+	Elapsed for ansering query answer: 121.106607ms
+		Online upload: 256.000000 KB
+Answering query...
+18500-by-6 vs. 18-by-1024
+	Elapsed for ansering query answer: 849.237514ms
+	Rate: 6030.139011 MB/s
+	Time : 6030.139011 MB/s
+		Online download: 148072.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 75776000 KB
+Original DB dims: Dims: 74000-by-65536
+After squishing, with compression factor 3: Dims: 74000-by-21846
+Building query...
+	Elapsed for ansering query answer: 127.207252ms
+		Online upload: 256.000000 KB
+Answering query...
+18500-by-6 vs. 18-by-1024
+	Elapsed for ansering query answer: 854.172741ms
+	Rate: 5995.298160 MB/s
+	Time : 5995.298160 MB/s
+		Online download: 148072.000000 KB
+Executing DoublePIR
+Setup...
+signal: interrupt
+FAIL	github.com/ahenzinger/simplepir/pir	1892.270s

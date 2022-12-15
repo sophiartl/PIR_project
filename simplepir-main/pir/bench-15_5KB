@@ -1,0 +1,151 @@
+Working with: n=1024; db size=2^27 (l=12666, m=10923); logq=32; p=833; sigma=6.400000
+Total packed DB size is ~160.014934 MB
+Executing SimplePIR
+Setup...
+		Offline download: 50664 KB
+Original DB dims: Dims: 12666-by-10923
+After squishing, with compression factor 3: Dims: 12666-by-3641
+Building query...
+	Elapsed for ansering query answer: 36.081113ms
+		Online upload: 42.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 25.030173ms
+	Rate: 6392.881671 MB/s
+	Time : 6392.881671 MB/s
+		Online download: 49.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 50664 KB
+Original DB dims: Dims: 12666-by-10923
+After squishing, with compression factor 3: Dims: 12666-by-3641
+Building query...
+	Elapsed for ansering query answer: 19.395162ms
+		Online upload: 42.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 29.669064ms
+	Rate: 5393.325998 MB/s
+	Time : 5393.325998 MB/s
+		Online download: 49.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 50664 KB
+Original DB dims: Dims: 12666-by-10923
+After squishing, with compression factor 3: Dims: 12666-by-3641
+Building query...
+	Elapsed for ansering query answer: 19.470234ms
+		Online upload: 42.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 23.664129ms
+	Rate: 6761.919452 MB/s
+	Time : 6761.919452 MB/s
+		Online download: 49.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 50664 KB
+Original DB dims: Dims: 12666-by-10923
+After squishing, with compression factor 3: Dims: 12666-by-3641
+Building query...
+	Elapsed for ansering query answer: 21.502309ms
+		Online upload: 42.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 191.020836ms
+	Rate: 837.683143 MB/s
+	Time : 837.683143 MB/s
+		Online download: 49.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 50664 KB
+Original DB dims: Dims: 12666-by-10923
+After squishing, with compression factor 3: Dims: 12666-by-3641
+Building query...
+	Elapsed for ansering query answer: 21.942464ms
+		Online upload: 42.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 27.464957ms
+	Rate: 5826.149089 MB/s
+	Time : 5826.149089 MB/s
+		Online download: 49.000000 KB
+Avg SimplePIR time query generation nanoseconds: 23678256.400000 s
+Avg SimplePIR time query processing nanoseconds: 59369831.800000 s
+goos: linux
+goarch: amd64
+pkg: github.com/ahenzinger/simplepir/pir
+cpu: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz
+BenchmarkSimplePirSingle-112     	       1	33258846270 ns/op
+Working with: n=1024; db size=2^28 (l=4497, m=65536); logq=32; p=552; sigma=6.400000
+Total packed DB size is ~320.008082 MB
+Executing DoublePIR
+Setup...
+		Offline download: 73678848 KB
+Original DB dims: Dims: 4497-by-65536
+After squishing, with compression factor 3: Dims: 4497-by-21846
+Building query...
+	Elapsed for ansering query answer: 114.326285ms
+		Online upload: 256.000000 KB
+Answering query...
+17988-by-1 vs. 3-by-1024
+	Elapsed for ansering query answer: 125.831902ms
+	Rate: 2543.139512 MB/s
+	Time : 2543.139512 MB/s
+		Online download: 143974.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 73678848 KB
+Original DB dims: Dims: 4497-by-65536
+After squishing, with compression factor 3: Dims: 4497-by-21846
+Building query...
+	Elapsed for ansering query answer: 117.637577ms
+		Online upload: 256.000000 KB
+Answering query...
+17988-by-1 vs. 3-by-1024
+	Elapsed for ansering query answer: 121.643299ms
+	Rate: 2630.708675 MB/s
+	Time : 2630.708675 MB/s
+		Online download: 143974.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 73678848 KB
+Original DB dims: Dims: 4497-by-65536
+After squishing, with compression factor 3: Dims: 4497-by-21846
+Building query...
+	Elapsed for ansering query answer: 136.975317ms
+		Online upload: 256.000000 KB
+Answering query...
+17988-by-1 vs. 3-by-1024
+	Elapsed for ansering query answer: 121.065166ms
+	Rate: 2643.271326 MB/s
+	Time : 2643.271326 MB/s
+		Online download: 143974.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 73678848 KB
+Original DB dims: Dims: 4497-by-65536
+After squishing, with compression factor 3: Dims: 4497-by-21846
+Building query...
+	Elapsed for ansering query answer: 156.857096ms
+		Online upload: 256.000000 KB
+Answering query...
+17988-by-1 vs. 3-by-1024
+	Elapsed for ansering query answer: 121.77431ms
+	Rate: 2627.878424 MB/s
+	Time : 2627.878424 MB/s
+		Online download: 143974.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 73678848 KB
+Original DB dims: Dims: 4497-by-65536
+After squishing, with compression factor 3: Dims: 4497-by-21846
+Building query...
+	Elapsed for ansering query answer: 133.740158ms
+		Online upload: 256.000000 KB
+Answering query...
+17988-by-1 vs. 3-by-1024
+	Elapsed for ansering query answer: 142.53056ms
+	Rate: 2245.189255 MB/s
+	Time : 2245.189255 MB/s
+		Online download: 143974.000000 KB
+Avg SimplePIR time query generation nanoseconds: 131907286.600000 s
+Avg SimplePIR time query processing nanoseconds: 126569047.400000 s
+BenchmarkDoublePirSingle-112     	       1	119026243863 ns/op
+PASS
+ok  	github.com/ahenzinger/simplepir/pir	152.407s

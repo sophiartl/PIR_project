@@ -1,0 +1,15 @@
+Starting with parameters for 2^14 x 32768 bytes...
+Using a 16384 x 32768 byte database (536870912 bytes total)
+fetching index 4235 out of 16384 items
+initializing client
+generating public parameters
+public parameters size: 8912928 bytes
+initial query size: 16416 bytes
+generating db
+in fucntion 1
+processing query
+processing query (took 2055835 us).
+response size: 61440 bytes
+decoding response
+decoding reponse (took 2128 us).
+completed correctly!
