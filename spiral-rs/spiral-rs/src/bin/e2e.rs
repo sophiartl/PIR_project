@@ -1,3 +1,4 @@
+use csv::Writer;
 use rand::thread_rng;
 use rand::Rng;
 use spiral_rs::arith::*;
@@ -7,6 +8,8 @@ use spiral_rs::server::*;
 use spiral_rs::util::*;
 use std::env;
 use std::fs;
+
+use std::path::Path;
 use std::time::Instant;
 
 fn print_params_summary(params: &Params) {
@@ -72,62 +75,93 @@ fn main() {
     println!("generating public parameters");
     let pub_params = client.generate_keys();
     let pub_params_buf = pub_params.serialize();
+
+    let mut procc: [u128; 5] = [0, 0, 0, 0, 0];
+    let mut gen: [u128; 5] = [0, 0, 0, 0, 0];
+    let mut dec: [u128; 5] = [0, 0, 0, 0, 0];
+    let mut quer_size = 0;
+    let mut asnw_size = 0;
+
     println!("public parameters size: {} bytes", pub_params_buf.len());
-    let now_gen = Instant::now();
-    let query = client.generate_query(idx_target);
-    let time_gen = now_gen.elapsed().as_micros();
-    let query_buf = query.serialize();
-    println!("initial query size: {} bytes", query_buf.len());
+    for test in 0..5 {
+        let now_gen = Instant::now();
+        let query = client.generate_query(idx_target);
+        let time_gen = now_gen.elapsed().as_micros();
+        let query_buf = query.serialize();
+        println!("initial query size: {} bytes", query_buf.len());
+        quer_size = query_buf.len();
+        gen[test] = time_gen;
+        println!("generating db");
+        let (corr_item, db) = generate_random_db_and_get_item(&params, idx_target);
 
-    println!("generating db");
-    let (corr_item, db) = generate_random_db_and_get_item(&params, idx_target);
+        println!("processing query");
+        let now = Instant::now();
+        let response = process_query(&params, &pub_params, &query, db.as_slice());
+        let end = now.elapsed().as_micros();
+        println!("processing query (took {} us).", end);
+        procc[test] = end;
+        println!("response size: {} bytes", response.len());
+        asnw_size = response.len();
+        println!("decoding response");
+        let now_dec = Instant::now();
+        let result = client.decode_response(response.as_slice());
+        let end_dec = now_dec.elapsed().as_micros();
+        println!("decoding reponse (took {} us).", end_dec);
+        dec[test] = end;
+        let p_bits = log2_ceil(params.pt_modulus) as usize;
+        let corr_result = corr_item.to_vec(p_bits, params.modp_words_per_chunk());
 
-    println!("processing query");
-    let now = Instant::now();
-    let response = process_query(&params, &pub_params, &query, db.as_slice());
-    let end = now.elapsed().as_micros();
-    println!("processing query (took {} us).", end);
-    println!("response size: {} bytes", response.len());
+        assert_eq!(result.len(), corr_result.len());
+        for z in 0..corr_result.len() {
+            assert_eq!(result[z], corr_result[z], "error in response at {:?}", z);
+        }
 
-    println!("decoding response");
-    let now_dec = Instant::now();
-    let result = client.decode_response(response.as_slice());
-    let end_dec = now_dec.elapsed().as_micros();
-    println!("decoding reponse (took {} us).", end_dec);
-
-    let p_bits = log2_ceil(params.pt_modulus) as usize;
-    let corr_result = corr_item.to_vec(p_bits, params.modp_words_per_chunk());
-
-    assert_eq!(result.len(), corr_result.len());
-    for z in 0..corr_result.len() {
-        assert_eq!(result[z], corr_result[z], "error in response at {:?}", z);
+        println!("completed correctly!");
     }
 
-    println!("completed correctly!");
+    let sum: u128 = gen.iter().sum();
+    let gen_avg = sum as f64 / gen.len() as f64;
+    let sum3: u128 = procc.iter().sum();
+    let proc_avg = sum3 as f64 / procc.len() as f64;
 
-    let data = format!(
-        "
-    n={}; db size={}; entry size ={}; record size ={};
-    public parameter size={} bytes;
-    query_size={} bytes; query generation time={} us;
-    answer size={} bytes; query processing time={} us;
-    decoding time={}.
-    ",
-        target_num_log2,
-        params.num_items().to_string(),
-        item_size_bytes,
-        params.item_size().to_string(),
+    let file_path = Path::new("results.csv");
+    let mut writer = Writer::from_path(file_path).expect("Unable to write file");
+    writer.write_record(&[
+        target_num_log2.to_string(),
+        item_size_bytes.to_string(),
+        gen_avg.to_string(),
+        proc_avg.to_string(),
         pub_params_buf.len().to_string(),
-        query_buf.len().to_string(),
-        time_gen,
-        response.len().to_string(),
-        end.to_string(),
-        end_dec.to_string(),
-    );
+        quer_size.to_string(),
+        asnw_size.to_string(),
+    ]);
 
-    let path_to: String = format!("spiral-{}_{}.txt", target_num_log2, item_size_bytes);
+    // Flush the writer to ensure all data is written to the file
+    writer.flush();
 
-    fs::write(path_to, data).expect("Unable to write file");
+    // let data = format!(
+    //     "
+    // n={}; db size={}; entry size ={}; record size ={};
+    // public parameter size={} bytes;
+    // query_size={} bytes; query generation time={} us;
+    // answer size={} bytes; query processing time={} us;
+    // decoding time={}.
+    // ",
+    //     target_num_log2,
+    //     params.num_items().to_string(),
+    //     item_size_bytes,
+    //     params.item_size().to_string(),
+    //     pub_params_buf.len().to_string(),
+    //     query_buf.len().to_string(),
+    //     time_gen,
+    //     response.len().to_string(),
+    //     end.to_string(),
+    //     end_dec.to_string(),
+    // );
+
+    // let path_to: String = format!("spiral-{}_{}.txt", target_num_log2, item_size_bytes / 1024);
+
+    // fs::write(path_to, data).expect("Unable to write file");
 
     // let file = OpenOptions::new()
     //     .write(true)
