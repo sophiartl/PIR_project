@@ -1,15 +1,15 @@
-use csv::Writer;
 use rand::thread_rng;
 use rand::Rng;
 use spiral_rs::arith::*;
 use spiral_rs::client::*;
+use std::fs::OpenOptions;
+
 use spiral_rs::params::*;
 use spiral_rs::server::*;
 use spiral_rs::util::*;
 use std::env;
 use std::fs;
 
-use std::path::Path;
 use std::time::Instant;
 
 fn print_params_summary(params: &Params) {
@@ -124,20 +124,27 @@ fn main() {
     let sum3: u128 = procc.iter().sum();
     let proc_avg = sum3 as f64 / procc.len() as f64;
 
-    let file_path = Path::new("results.csv");
-    let mut writer = Writer::from_path(file_path).expect("Unable to write file");
-    writer.write_record(&[
+    let mut file = OpenOptions::new()
+        .write(true)
+        .append(true)
+        .open("results.csv")
+        .unwrap();
+    let mut wtr = csv::Writer::from_writer(file);
+
+    // let file_path = Path::new("results.csv");
+    // let mut writer = Writer::from_path(file_path).expect("Unable to write file");
+    wtr.write_record(&[
         target_num_log2.to_string(),
         item_size_bytes.to_string(),
-        gen_avg.to_string(),
-        proc_avg.to_string(),
-        pub_params_buf.len().to_string(),
-        quer_size.to_string(),
-        asnw_size.to_string(),
+        (gen_avg * 1000.0).to_string(),
+        (proc_avg * 1000.0).to_string(),
+        (pub_params_buf.len() / 1024).to_string(),
+        (quer_size / 1024).to_string(),
+        (asnw_size / 1024).to_string(),
     ]);
 
     // Flush the writer to ensure all data is written to the file
-    writer.flush();
+    wtr.flush();
 
     // let data = format!(
     //     "
