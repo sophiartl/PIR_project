@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd pir_project/PIR_project/spiral-rs/spiral-rs
+cd spiral-rs/spiral-rs
 
 echo "running commands"
 
@@ -80,6 +80,6 @@ cargo run --release --bin e2e 21 8192 > bench-21_8KB &&
 cargo run --release --bin e2e 21 16384 > bench-21_16KB &&
 cargo run --release --bin e2e 21 32768 > bench-21_32KB &&
 cargo run --release --bin e2e 21 65536 > bench-21_64KB &&
-cargo run --release --bin e2e 21 131072 > bench-21_128KB &&
+cargo run --release --bin e2e 21 131072 > bench-21_128KB 
 
 
