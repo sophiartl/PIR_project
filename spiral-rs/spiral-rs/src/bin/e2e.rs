@@ -72,18 +72,24 @@ fn main() {
     );
     println!("initializing client");
     let mut client = Client::init(&params);
-    println!("generating public parameters");
-    let pub_params = client.generate_keys();
-    let pub_params_buf = pub_params.serialize();
 
     let mut procc: [u128; 5] = [0, 0, 0, 0, 0];
     let mut gen: [u128; 5] = [0, 0, 0, 0, 0];
     let mut dec: [u128; 5] = [0, 0, 0, 0, 0];
+    let mut hint: [u128; 5] = [0, 0, 0, 0, 0];
+    let mut pp_size = 0;
     let mut quer_size = 0;
     let mut asnw_size = 0;
 
-    println!("public parameters size: {} bytes", pub_params_buf.len());
     for test in 0..5 {
+        println!("generating public parameters");
+        let now_hint = Instant::now();
+        let pub_params = client.generate_keys();
+        let pub_params_buf = pub_params.serialize();
+        let time_hint = now_hint.elapsed().as_micros();
+        hint[test] = time_hint;
+        println!("public parameters size: {} bytes", pub_params_buf.len());
+        pp_size = pub_params_buf.len();
         let now_gen = Instant::now();
         let query = client.generate_query(idx_target);
         let time_gen = now_gen.elapsed().as_micros();
@@ -107,7 +113,7 @@ fn main() {
         let result = client.decode_response(response.as_slice());
         let end_dec = now_dec.elapsed().as_micros();
         println!("decoding reponse (took {} us).", end_dec);
-        dec[test] = end;
+        dec[test] = end_dec;
         let p_bits = log2_ceil(params.pt_modulus) as usize;
         let corr_result = corr_item.to_vec(p_bits, params.modp_words_per_chunk());
 
@@ -121,24 +127,36 @@ fn main() {
 
     let sum: u128 = gen.iter().sum();
     let gen_avg = sum as f64 / gen.len() as f64;
+
     let sum3: u128 = procc.iter().sum();
     let proc_avg = sum3 as f64 / procc.len() as f64;
+
+    let sum2: u128 = hint.iter().sum();
+    let hint_avg = sum2 as f64 / hint.len() as f64;
+
+    let sum4: u128 = dec.iter().sum();
+    let dec_avg = sum4 as f64 / dec.len() as f64;
 
     let mut file = OpenOptions::new()
         .write(true)
         .append(true)
-        .open("results.csv")
+        .open("spiral_xp.csv")
         .unwrap();
     let mut wtr = csv::Writer::from_writer(file);
 
     // let file_path = Path::new("results.csv");
     // let mut writer = Writer::from_path(file_path).expect("Unable to write file");
+    let base: i32 = 2;
     wtr.write_record(&[
-        target_num_log2.to_string(),
-        item_size_bytes.to_string(),
-        (gen_avg * 1000.0).to_string(),
-        (proc_avg * 1000.0).to_string(),
-        (pub_params_buf.len() / 1024).to_string(),
+        (base.pow(target_num_log2 as u32)).to_string(),
+        (item_size_bytes as f32 / 1024.0).to_string(),
+        ((base.pow(target_num_log2 as u32) as f32) * (item_size_bytes as f32 / 1024.0) / 1024.0)
+            .to_string(),
+        hint_avg.to_string(),
+        (gen_avg).to_string(),
+        (proc_avg).to_string(),
+        dec_avg.to_string(),
+        (pp_size / 1024).to_string(),
         (quer_size / 1024).to_string(),
         (asnw_size / 1024).to_string(),
     ]);
