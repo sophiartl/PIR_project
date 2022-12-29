@@ -2,7 +2,7 @@ Working with: n=1024; db size=2^31 (l=61479, m=60788); logq=32; p=589; sigma=6.4
 Total packed DB size is ~4099.612627 MB
 Executing SimplePIR
 Setup...
-		Offline download: 245916 KB
+		Offline download: 23 KB
 Original DB dims: Dims: 61479-by-60788
 After squishing, with compression factor 3: Dims: 61479-by-20263
 Building query...

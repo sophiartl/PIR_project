@@ -145,7 +145,7 @@ Answering query...
 	Time : 6087.463366 MB/s
 		Online download: 148072.000000 KB
 Avg SimplePIR time query generation nanoseconds: 155198210.600000 s
-Avg SimplePIR time query processing nanoseconds: 866522781.000000 s
+Avg SimplePIR time query processing nanoseconds: 	 s
 BenchmarkDoublePirSingle-112     	       1	1081252799508 ns/op
 PASS
 ok  	github.com/ahenzinger/simplepir/pir	2032.669s
