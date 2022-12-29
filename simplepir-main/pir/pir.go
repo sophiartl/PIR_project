@@ -169,7 +169,6 @@ func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64, []flo
 
 	var double_hint []float64
 	if pi.Name() == "DoublePIR" {
-		fmt.Printf("\t\tCleint hint: %d KB\n", server_state.data[0].size())
 		client_hint := float64(offline_download.size() * uint64(p.logq) / (8.0 * 1024.0))
 		server_hint := float64(server_state.data[0].size() * uint64(p.logq) / (8.0 * 1024.0))
 		double_hint = append(double_hint, client_hint)
