@@ -1,10 +1,12 @@
 package pir
 
-// #cgo CFLAGS: -O3 -march=native -msse4.1 -maes -mavx2 -mavx
+// #cgo CFLAGS: -O3 -msse4.1 -maes -mavx2 -mavx
 // #include "pir.h"
 import "C"
-import "fmt"
-import "math/big"
+import (
+	"fmt"
+	"math/big"
+)
 
 type Matrix struct {
 	rows uint64
@@ -156,22 +158,22 @@ func MatrixMul(a *Matrix, b *Matrix) *Matrix {
 }
 
 func MatrixMulTransposedPacked(a *Matrix, b *Matrix, basis, compression uint64) *Matrix {
-        fmt.Printf("%d-by-%d vs. %d-by-%d\n", a.rows, a.cols, b.cols, b.rows)
-        if compression != 3 && basis != 10 {
-                panic("Must use hard-coded values!")
-        }
+	fmt.Printf("%d-by-%d vs. %d-by-%d\n", a.rows, a.cols, b.cols, b.rows)
+	if compression != 3 && basis != 10 {
+		panic("Must use hard-coded values!")
+	}
 
-        out := MatrixZeros(a.rows, b.rows)
+	out := MatrixZeros(a.rows, b.rows)
 
-        outPtr := (*C.Elem)(&out.data[0])
-        aPtr := (*C.Elem)(&a.data[0])
-        bPtr := (*C.Elem)(&b.data[0])
-        aRows := C.size_t(a.rows)
+	outPtr := (*C.Elem)(&out.data[0])
+	aPtr := (*C.Elem)(&a.data[0])
+	bPtr := (*C.Elem)(&b.data[0])
+	aRows := C.size_t(a.rows)
 	aCols := C.size_t(a.cols)
-        bRows := C.size_t(b.rows)
-        bCols := C.size_t(b.cols)
+	bRows := C.size_t(b.rows)
+	bCols := C.size_t(b.cols)
 
-        C.matMulTransposedPacked(outPtr, aPtr, bPtr, aRows, aCols, bRows, bCols)
+	C.matMulTransposedPacked(outPtr, aPtr, bPtr, aRows, aCols, bRows, bCols)
 
 	return out
 }
@@ -288,28 +290,28 @@ func (m *Matrix) Expand(mod uint64, delta uint64) {
 }
 
 func (m *Matrix) TransposeAndExpandAndConcatColsAndSquish(mod, delta, concat, basis, d uint64) {
-        if m.rows % concat != 0 {
-                panic("Bad input!")
-        }
+	if m.rows%concat != 0 {
+		panic("Bad input!")
+	}
 
-        n := MatrixZeros(m.cols*delta*concat, (m.rows/concat+d-1)/d)
+	n := MatrixZeros(m.cols*delta*concat, (m.rows/concat+d-1)/d)
 
-        for j := uint64(0); j < m.rows; j++ {
-                for i := uint64(0); i < m.cols; i++ {
-                        val := uint64(m.data[i+j*m.cols])
-                        for f := uint64(0); f < delta; f++ {
-                                new_val := val % mod
-                                r := (i*delta+f) + m.cols*delta*(j % concat)
-                                c := j / concat
-                                n.data[r*n.cols+c/d] += C.Elem(new_val << (basis * (c%d)))
-                                val /= mod
-                        }
-                }
-        }
+	for j := uint64(0); j < m.rows; j++ {
+		for i := uint64(0); i < m.cols; i++ {
+			val := uint64(m.data[i+j*m.cols])
+			for f := uint64(0); f < delta; f++ {
+				new_val := val % mod
+				r := (i*delta + f) + m.cols*delta*(j%concat)
+				c := j / concat
+				n.data[r*n.cols+c/d] += C.Elem(new_val << (basis * (c % d)))
+				val /= mod
+			}
+		}
+	}
 
-        m.cols = n.cols
-        m.rows = n.rows
-        m.data = n.data
+	m.cols = n.cols
+	m.rows = n.rows
+	m.data = n.data
 }
 
 // Computes the inverse operations of Expand(.)

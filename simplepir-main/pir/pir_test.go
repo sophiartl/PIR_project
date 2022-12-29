@@ -3,6 +3,7 @@ package pir
 import (
 	"encoding/csv"
 	"fmt"
+	"log"
 	"math"
 	"os"
 	"strconv"
@@ -236,7 +237,7 @@ func TestDoublePirLongRowBatch(t *testing.T) {
 
 // Benchmark SimplePIR performance.
 func BenchmarkSimplePirSingle(b *testing.B) {
-	f, err := os.Create("simple-cpu.out")
+	_, err := os.Create("simple-cpu.out")
 	if err != nil {
 		panic("Error creating file")
 	}
@@ -263,25 +264,59 @@ func BenchmarkSimplePirSingle(b *testing.B) {
 
 	DB := MakeRandomDB(N, d, &p)
 	var tputs []float64
+
 	var processing []float64
 	var gener []float64
+	var hint []float64
+	var dec []float64
+	var hint_size []float64
+	var query_size float64
+	var answer_size float64
+	var tput float64
+	var time_hint int64
+	var time_query_generation int64
+	var time_query_processing int64
+	var time_decoding int64
 
 	for j := 0; j < 5; j++ {
-		tput, _, _, _, time_query_generation, time_query_processing := RunFakePIR(&pir, DB, p, []uint64{i}, f, false)
+		tput, _, hint_size, query_size, answer_size, time_hint, time_query_generation, time_query_processing, time_decoding = RunPIR(&pir, DB, p, []uint64{i})
 		tputs = append(tputs, tput)
 		gener = append(gener, float64(time_query_generation))
 		processing = append(processing, float64(time_query_processing))
+		hint = append(hint, float64(time_hint))
+		dec = append(dec, float64(time_decoding))
+
 	}
 	// fmt.Printf("Avg SimplePIR tput, except for first run: %f MB/s\n", avg(tputs))
 	// fmt.Printf("Std dev of SimplePIR tput, except for first run: %f MB/s\n", stddev(tputs))
-	fmt.Printf("Avg SimplePIR time query generation nanoseconds: %f s\n", avg(gener))
-	fmt.Printf("Avg SimplePIR time query processing nanoseconds: %f s\n", avg(processing))
+	fmt.Printf("Avg Singl timee query generation : %f micros\n", avg(gener)/1000.0)
+	fmt.Printf("Avg Singl time query processing : %f micros\n", avg(processing)/1000.0)
+	fmt.Printf("Avg Singl time Hint processing : %f micros\n", avg(hint)/1000.0)
+	fmt.Printf("Hint client : %f micros\n", hint_size[0])
+
+	// read the file
+	var path = "sample.csv"
+	f_, err_ := os.OpenFile(path, os.O_APPEND|os.O_WRONLY, os.ModeAppend)
+
+	if err_ != nil {
+		log.Fatal(err_)
+	}
+	defer f_.Close()
+	var data [][]string
+	data = append(data, []string{"Simple", fmt.Sprintf("%f", avg(hint)/1000.0), fmt.Sprintf("%f", avg(gener)/1000.0), fmt.Sprintf("%f", avg(processing)/1000.0), fmt.Sprintf("%f", avg(dec)/1000.0), fmt.Sprintf("%f", hint_size[0]/1024), fmt.Sprintf("%f", query_size), fmt.Sprintf("%f", answer_size)})
+
+	w := csv.NewWriter(f_)
+	w.WriteAll(data)
+
+	if err_ != nil {
+		log.Fatal(err_)
+	}
 
 }
 
 // Benchmark DoublePIR performance.
 func BenchmarkDoublePirSingle(b *testing.B) {
-	f, err := os.Create("double-cpu.out")
+	_, err := os.Create("double-cpu.out")
 	if err != nil {
 		panic("Error creating file")
 	}
@@ -308,19 +343,55 @@ func BenchmarkDoublePirSingle(b *testing.B) {
 
 	DB := MakeRandomDB(N, d, &p)
 	var tputs []float64
+
 	var processing []float64
 	var gener []float64
+	var hint []float64
+	var dec []float64
+	var hint_size []float64
+	var query_size float64
+	var answer_size float64
+	var tput float64
+	var time_hint int64
+	var time_query_generation int64
+	var time_query_processing int64
+	var time_decoding int64
 
 	for j := 0; j < 5; j++ {
-		tput, _, _, _, time_query_generation, time_query_processing := RunFakePIR(&pir, DB, p, []uint64{i}, f, false)
+		tput, _, hint_size, query_size, answer_size, time_hint, time_query_generation, time_query_processing, time_decoding = RunPIR(&pir, DB, p, []uint64{i})
 		tputs = append(tputs, tput)
 		gener = append(gener, float64(time_query_generation))
 		processing = append(processing, float64(time_query_processing))
+		hint = append(hint, float64(time_hint))
+		dec = append(dec, float64(time_decoding))
+
 	}
 	// fmt.Printf("Avg SimplePIR tput, except for first run: %f MB/s\n", avg(tputs))
 	// fmt.Printf("Std dev of SimplePIR tput, except for first run: %f MB/s\n", stddev(tputs))
-	fmt.Printf("Avg SimplePIR time query generation nanoseconds: %f s\n", avg(gener))
-	fmt.Printf("Avg SimplePIR time query processing nanoseconds: %f s\n", avg(processing))
+	fmt.Printf("Avg Doubl timee query generation : %f micros\n", avg(gener)/1000.0)
+	fmt.Printf("Avg Doubl time query processing : %f micros\n", avg(processing)/1000.0)
+	fmt.Printf("Avg Doubl time Hint processing : %f micros\n", avg(hint)/1000.0)
+	fmt.Printf("Hint client : %f KB\n", hint_size[0])
+	fmt.Printf("Hint server : %f KB\n", hint_size[1])
+
+	// read the file
+	var path = "sample.csv"
+	f_, err_ := os.OpenFile(path, os.O_APPEND|os.O_WRONLY, os.ModeAppend)
+
+	if err_ != nil {
+		log.Fatal(err_)
+	}
+	defer f_.Close()
+	var data [][]string
+	data = append(data, []string{"Double", fmt.Sprintf("%f", avg(hint)/1000.0), fmt.Sprintf("%f", avg(gener)/1000.0), fmt.Sprintf("%f", avg(processing)/1000.0), fmt.Sprintf("%f", avg(dec)/1000.0), fmt.Sprintf("%f", hint_size[1]/(1024)), fmt.Sprintf("%f", hint_size[0]/(1024*1024)), fmt.Sprintf("%f", query_size), fmt.Sprintf("%f", answer_size)})
+
+	w := csv.NewWriter(f_)
+	w.WriteAll(data)
+
+	if err_ != nil {
+		log.Fatal(err_)
+	}
+
 }
 
 // Benchmark SimplePIR performance, on 1GB databases with increasing row length.
