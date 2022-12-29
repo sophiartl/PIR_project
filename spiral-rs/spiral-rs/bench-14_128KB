@@ -29,3 +29,14 @@ public parameters size: 42991648 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
+processing query
+processing query (took 7519508 us).
+response size: 204800 bytes
+decoding response
+decoding reponse (took 7748 us).
+completed correctly!
+generating public parameters
+public parameters size: 42991648 bytes
+initial query size: 16416 bytes
+generating db
+in fucntion 1

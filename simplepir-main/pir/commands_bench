@@ -1,73 +1,11 @@
-cargo run --release --bin e2e  14 256  &&
-cargo run --release --bin e2e  14 1024  &&
-cargo run --release --bin e2e  14 5120  &&
-cargo run --release --bin e2e  14 10240 &&
-cargo run --release --bin e2e  14 15360  &&
-cargo run --release --bin e2e  14 30720  &&
-cargo run --release --bin e2e  14 61440  &&
-cargo run --release --bin e2e  14 102400 &&
-
-cargo run --release --bin e2e 15 256  &&
-cargo run --release --bin e2e 15 1024  &&
-cargo run --release --bin e2e 15 5120  &&
-cargo run --release --bin e2e 15 10240 &&
-cargo run --release --bin e2e 15 15360  &&
-cargo run --release --bin e2e 15 30720  &&
-cargo run --release --bin e2e 15 61440  &&
-cargo run --release --bin e2e 15 102400 &&
-
-cargo run --release --bin e2e 16 256  &&
-cargo run --release --bin e2e 16 1024  &&
-cargo run --release --bin e2e 16 5120 &&
-cargo run --release --bin e2e 16 10240  &&
-cargo run --release --bin e2e 16 16360 &&
-cargo run --release --bin e2e 16 30720 &&
-cargo run --release --bin e2e 16 61440  &&
-cargo run --release --bin e2e 16 102400 &&
-
-cargo run --release --bin e2e 17 256  &&
-cargo run --release --bin e2e 17 1024  &&
-cargo run --release --bin e2e 17 5120  &&
-cargo run --release --bin e2e 17 10240   &&
-cargo run --release --bin e2e 17 15360   &&
-cargo run --release --bin e2e 17 30720  &&
-cargo run --release --bin e2e 17 61440  &&
-cargo run --release --bin e2e 17 102400  &&
-
-cargo run --release --bin e2e 18 256  &&
-cargo run --release --bin e2e 18 1024  &&
-cargo run --release --bin e2e 18 5120 &&
-cargo run --release --bin e2e 18 10240  &&
-cargo run --release --bin e2e 18 15360 &&
-cargo run --release --bin e2e 18 30720 &&
-cargo run --release --bin e2e 18 61440  &&
-cargo run --release --bin e2e 18 102400 &&
-
-cargo run --release --bin e2e 20 256  &&
-cargo run --release --bin e2e 20 1024   && 
-cargo run --release --bin e2e 20 5120  &&
-cargo run --release --bin e2e 20 10240 &&
-cargo run --release --bin e2e 20 15360  &&
-cargo run --release --bin e2e 20 30720 &&
-cargo run --release --bin e2e 20 61440 &&
-# todo SEGFAULR cargo run --release --bin e2e 19 102400  &&
-
-
-
-
-LOG_N=19 D=819200 go test -bench PirSingle -timeout 0 -run=^$ > remain-19_100KB && echo "done1"
-LOG_N=20 D=491620 go test -bench PirSingle -timeout 0 -run=^$ > remain-20_60KB && echo "done2"
-LOG_N=20 D=819200 go test -bench PirSingle -timeout 0 -run=^$ > remain-20_100KB && echo "done3"
-
-
-
-
-
-
-
-
-
-
+cargo run --release --bin e2e 15 262144 > bench-15_256KB &&
+cargo run --release --bin e2e 15 1024 > bench-15_1KB &&
+cargo run --release --bin e2e 15 5120 > bench-15_5KB &&
+cargo run --release --bin e2e 15 10240 > bench-15_10KB &&
+cargo run --release --bin e2e 15 15360 > bench-15_15KB &&
+cargo run --release --bin e2e 15 30720 > bench-15_30KB &&
+cargo run --release --bin e2e 15 61440 > bench-15_60KB &&
+cargo run --release --bin e2e 15 102400 > bench-15_100KB 
 
 LOG_N=15 D=2048 go test -bench PirSingle -timeout 0 -run=^$ > bench-15_256B  &&
 LOG_N=15 D=8192 go test -bench PirSingle -timeout 0 -run=^$ > bench-15_1KB &&
@@ -97,42 +35,134 @@ LOG_N=17 D=491620 go test -bench PirSingle -timeout 0 -run=^$ > bench-17_60KB &&
 LOG_N=17 D=819200 go test -bench PirSingle -timeout 0 -run=^$ > bench-17_100KB 
 
 
-LOG_N=20 D=2048 go test -bench PirSingle -timeout 0 -run=^$ > bench-20_256B  &&
-LOG_N=20 D=8192 go test -bench PirSingle -timeout 0 -run=^$ > bench-20_1KB &&
-LOG_N=20 D=40960 go test -bench PirSingle -timeout 0 -run=^$ > bench-20_5KB  &&
-LOG_N=20 D=81920 go test -bench PirSingle -timeout 0 -run=^$ > bench-20_10KB &&
-LOG_N=20 D=122880 go test -bench PirSingle -timeout 0 -run=^$ > bench-20_15KB  &&
-LOG_N=20 D=245760 go test -bench PirSingle -timeout 0 -run=^$ > bench-20_30KB &&
-LOG_N=20 D=491620 go test -bench PirSingle -timeout 0 -run=^$ > bench-20_60KB &&
-LOG_N=20 D=819200 go test -bench PirSingle -timeout 0 -run=^$ > bench-20_100KB &&
+LOG_N=19 D=2048 go test -bench PirSingle -timeout 0 -run=^$ > bench-19_256B  &&
+LOG_N=19 D=8192 go test -bench PirSingle -timeout 0 -run=^$ > bench-19_1KB &&
+LOG_N=19 D=40960 go test -bench PirSingle -timeout 0 -run=^$ > bench-19_5KB  &&
+LOG_N=19 D=81920 go test -bench PirSingle -timeout 0 -run=^$ > bench-19_10KB 
+&&
 
-
-LOG_N=21 D=2048 go test -bench PirSingle -timeout 0 -run=^$ > bench-21_256B  &&
-LOG_N=21 D=8192 go test -bench PirSingle -timeout 0 -run=^$ > bench-21_1KB &&
-LOG_N=21 D=40960 go test -bench PirSingle -timeout 0 -run=^$ > bench-21_5KB  &&
-LOG_N=21 D=81920 go test -bench PirSingle -timeout 0 -run=^$ > bench-21_10KB &&
-LOG_N=21 D=122880 go test -bench PirSingle -timeout 0 -run=^$ > bench-21_15KB  &&
-LOG_N=21 D=245760 go test -bench PirSingle -timeout 0 -run=^$ > bench-21_30KB &&
-LOG_N=21 D=491620 go test -bench PirSingle -timeout 0 -run=^$ > bench-21_60KB &&
-LOG_N=21 D=819200 go test -bench PirSingle -timeout 0 -run=^$ > bench-21_100KB 
-
-
-LOG_N=22 D=2048 go test -bench PirSingle -timeout 0 -run=^$ > bench-22_256B  &&
-LOG_N=22 D=8192 go test -bench PirSingle -timeout 0 -run=^$ > bench-22_1KB &&
-LOG_N=22 D=40960 go test -bench PirSingle -timeout 0 -run=^$ > bench-22_5KB  &&
-LOG_N=22 D=81920 go test -bench PirSingle -timeout 0 -run=^$ > bench-22_10KB &&
 LOG_N=22 D=122880 go test -bench PirSingle -timeout 0 -run=^$ > bench-22_15KB  &&
 LOG_N=22 D=245760 go test -bench PirSingle -timeout 0 -run=^$ > bench-22_30KB &&
-LOG_N=22 D=491620 go test -bench PirSingle -timeout 0 -run=^$ > bench-22_60KB &&
-LOG_N=22 D=819200 go test -bench PirSingle -timeout 0 -run=^$ > bench-22_100KB 
+
+
+LOG_N=20 D=491620 go test -bench PirSingle -timeout 0 -run=^$ > bench-20_60KB &&
+LOG_N=20 D=819200 go test -bench PirSingle -timeout 0 -run=^$ > bench-20_100KB 
 
 
 
 
 
+cargo run --release --bin e2e 15 256 > bench-15_256B &&
+cargo run --release --bin e2e 15 1024 > bench-15_1KB &&
+cargo run --release --bin e2e 15 4096 > bench-15_4KB &&
+cargo run --release --bin e2e 15 8192 > bench-15_8KB &&
+cargo run --release --bin e2e 15 16384 > bench-15_16KB &&
+cargo run --release --bin e2e 15 32768 > bench-15_32KB &&
+cargo run --release --bin e2e 15 65536 > bench-15_64KB &&
+cargo run --release --bin e2e 15 131072 > bench-15_128KB &&
+cargo run --release --bin e2e 15 262144 > bench-15_256KB 
 
 
 
+cargo run --release --bin e2e 14 256 > bench-14_256B &&
+cargo run --release --bin e2e 14 1024 > bench-14_1KB &&
+cargo run --release --bin e2e 14 4096 > bench-14_4KB &&
+cargo run --release --bin e2e 14 8192 > bench-14_8KB &&
+cargo run --release --bin e2e 14 16384 > bench-14_16KB &&
+cargo run --release --bin e2e 14 32768 > bench-14_32KB &&
+cargo run --release --bin e2e 14 65536 > bench-14_64KB &&
+cargo run --release --bin e2e 14 131072 > bench-14_128KB &&
+cargo run --release --bin e2e 14 262144 > bench-14_256KB 
+
+cargo run --release --bin e2e 16 256 > bench-16_256B &&
+cargo run --release --bin e2e 16 1024 > bench-16_1KB &&
+cargo run --release --bin e2e 16 4096 > bench-16_4KB &&
+cargo run --release --bin e2e 16 8192 > bench-16_8KB &&
+cargo run --release --bin e2e 16 16384 > bench-16_16KB &&
+cargo run --release --bin e2e 16 32768 > bench-16_32KB &&
+cargo run --release --bin e2e 16 65536 > bench-16_64KB &&
+cargo run --release --bin e2e 16 131072 > bench-16_128KB &&
+cargo run --release --bin e2e 16 262144 > bench-16_256KB &&
+
+cargo run --release --bin e2e 17 256 > bench-17_256B &&
+cargo run --release --bin e2e 17 1024 > bench-17_1KB &&
+cargo run --release --bin e2e 17 4096 > bench-17_4KB &&
+cargo run --release --bin e2e 17 8192 > bench-17_8KB &&
+cargo run --release --bin e2e 17 16384 > bench-17_16KB &&
+cargo run --release --bin e2e 17 32768 > bench-17_32KB &&
+cargo run --release --bin e2e 17 65536 > bench-17_64KB &&
+cargo run --release --bin e2e 17 131072 > bench-17_128KB &&
+cargo run --release --bin e2e 17 262144 > bench-17_256KB &&
+
+cargo run --release --bin e2e 18 256 > bench-18_256B &&
+cargo run --release --bin e2e 18 1024 > bench-18_1KB &&
+cargo run --release --bin e2e 18 4096 > bench-18_4KB &&
+cargo run --release --bin e2e 18 8192 > bench-18_8KB &&
+cargo run --release --bin e2e 18 16384 > bench-18_16KB &&
+cargo run --release --bin e2e 18 32768 > bench-18_32KB &&
+cargo run --release --bin e2e 18 65536 > bench-18_64KB &&
+cargo run --release --bin e2e 18 131072 > bench-18_128KB &&
+cargo run --release --bin e2e 18 262144 > bench-18_256KB  &&
+
+cargo run --release --bin e2e 19 256 > bench-19_256B &&
+cargo run --release --bin e2e 19 1024 > bench-19_1KB &&
+cargo run --release --bin e2e 19 4096 > bench-19_4KB &&
+cargo run --release --bin e2e 19 8192 > bench-19_8KB &&
+cargo run --release --bin e2e 19 16384 > bench-19_16KB &&
+cargo run --release --bin e2e 19 32768 > bench-19_32KB &&
+cargo run --release --bin e2e 19 65536 > bench-19_64KB &&
+cargo run --release --bin e2e 19 131072 > bench-19_128KB &&
+
+cargo run --release --bin e2e 20 256 > bench-20_256B &&
+cargo run --release --bin e2e 20 1024 > bench-20_1KB &&
+cargo run --release --bin e2e 20 4096 > bench-20_4KB &&
+cargo run --release --bin e2e 20 8192 > bench-20_8KB &&
+cargo run --release --bin e2e 20 16384 > bench-20_16KB &&
+cargo run --release --bin e2e 20 32768 > bench-20_32KB &&
+cargo run --release --bin e2e 20 65536 > bench-20_64KB &&
+cargo run --release --bin e2e 20 131072 > bench-20_128KB &&
+
+cargo run --release --bin e2e 21 256 > bench-21_256B &&
+cargo run --release --bin e2e 21 1024 > bench-21_1KB &&
+cargo run --release --bin e2e 21 4096 > bench-21_4KB &&
+cargo run --release --bin e2e 21 8192 > bench-21_8KB &&
+cargo run --release --bin e2e 21 16384 > bench-21_16KB &&
+cargo run --release --bin e2e 21 32768 > bench-21_32KB &&
+cargo run --release --bin e2e 21 65536 > bench-21_64KB &&
+cargo run --release --bin e2e 21 131072 > bench-21_128KB &&
+
+
+
+## ancie
+cargo run --release --bin e2e 21 256B > bench-21_256B &&
+cargo run --release --bin e2e 16 1024 > bench-16_1KB &&
+cargo run --release --bin e2e 16 5120 > bench-16_5KB &&
+cargo run --release --bin e2e 16 10240 > bench-16_10KB &&
+cargo run --release --bin e2e 16 16360 > bench-16_16KB &&
+cargo run --release --bin e2e 16 30720 > bench-16_30KB &&
+cargo run --release --bin e2e 16 61440 > bench-16_60KB &&
+cargo run --release --bin e2e 16 102400 > bench-16_100KB 
+
+
+
+cargo run --release --bin e2e 17 256 > bench-17_256 &&
+cargo run --release --bin e2e 18 1024 > bench-18_1KB &&
+cargo run --release --bin e2e 17 5120 > bench-17_5KB &&
+cargo run --release --bin e2e 17 10240 > bench-17_10KB &&
+cargo run --release --bin e2e 17 15360 > bench-17_15KB &&
+cargo run --release --bin e2e 17 30720 > bench-17_30KB &&
+cargo run --release --bin e2e 17 61440 > bench-17_60KB &&
+cargo run --release --bin e2e 17 102400 > bench-17_100KB 
+
+
+cargo run --release --bin e2e 19 256 > bench-19_256 &&
+cargo run --release --bin e2e 19 1024 > bench-19_1KB && 
+cargo run --release --bin e2e 19 5120 > bench-19_5KB &&
+cargo run --release --bin e2e 19 10240 > bench-19_10KB &&
+cargo run --release --bin e2e 19 15360 > bench-19_15KB &&
+cargo run --release --bin e2e 19 30720 > bench-19_30KB &&
+cargo run --release --bin e2e 19 61440 > bench-19_60KB &&
+cargo run --release --bin e2e 19 102400 > bench-19_100KB 
 
 
 cargo run --release --bin e2e 20 256 > bench-20_256 &&
