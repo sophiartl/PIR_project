@@ -60,6 +60,8 @@ func (pi *DoublePIR) GetBW(info DBinfo, p Params) {
 
 	online_upload := float64(p.m*p.logq+info.ne/info.x*p.l/info.x*p.logq) / (8.0 * 1024.0)
 	fmt.Printf("\t\tOnline upload: %d KB\n", uint64(online_upload))
+	fmt.Printf("\t\tInfo.x : %d\n", uint64(info.x))
+	fmt.Printf("\t\tInfo.ne : %d\n", uint64(info.ne))
 
 	online_download := float64(p.delta()*info.x*p.n*p.logq+p.delta()*p.n*info.ne*p.logq+p.delta()*info.ne*p.logq) / (8.0 * 1024.0)
 	fmt.Printf("\t\tOnline download: %d KB\n", uint64(online_download))
@@ -91,9 +93,9 @@ func (pi *DoublePIR) Setup(DB *Database, shared State, p Params) (State, Msg) {
 	H1.Squish(10, 3)
 
 	A2_copy := A2.RowsDeepCopy(0, A2.rows) // deep copy whole matrix
-	if A2_copy.rows % 3 != 0 {
-                A2_copy.Concat(MatrixZeros(3-(A2_copy.rows%3), A2_copy.cols))
-        }
+	if A2_copy.rows%3 != 0 {
+		A2_copy.Concat(MatrixZeros(3-(A2_copy.rows%3), A2_copy.cols))
+	}
 	A2_copy.Transpose()
 
 	return MakeState(H1, A2_copy), MakeMsg(H2)
@@ -112,9 +114,9 @@ func (pi *DoublePIR) FakeSetup(DB *Database, p Params) (State, float64) {
 	H1.Add(p.p / 2)
 	H1.Squish(10, 3)
 
-	A2_rows := p.l/info.x
-	if A2_rows % 3 != 0 {
-		A2_rows += (3-(A2_rows % 3))
+	A2_rows := p.l / info.x
+	if A2_rows%3 != 0 {
+		A2_rows += (3 - (A2_rows % 3))
 	}
 	A2_copy := MatrixRand(p.n, A2_rows, p.logq, 0)
 
@@ -174,13 +176,13 @@ func (pi *DoublePIR) Answer(DB *Database, query MsgSlice, server State, shared S
 			batch_sz = DB.data.rows - last
 		}
 		a := MatrixMulVecPacked(DB.data.Rows(last, batch_sz),
-			                q1, DB.info.basis, DB.info.squishing)
+			q1, DB.info.basis, DB.info.squishing)
 		a1.Concat(a)
 		last += batch_sz
 	}
 
 	a1.TransposeAndExpandAndConcatColsAndSquish(p.p, p.delta(), DB.info.x, 10, 3)
-        h1 := MatrixMulTransposedPacked(a1, A2_transpose, 10, 3)
+	h1 := MatrixMulTransposedPacked(a1, A2_transpose, 10, 3)
 	msg := MakeMsg(h1)
 
 	for _, q := range query.data {
@@ -200,38 +202,38 @@ func (pi *DoublePIR) Answer(DB *Database, query MsgSlice, server State, shared S
 func (pi *DoublePIR) Recover(i uint64, batch_index uint64, offline Msg, query Msg,
 	answer Msg, shared State, client State, p Params, info DBinfo) uint64 {
 	H2 := offline.data[0]
-	h1 := answer.data[0].RowsDeepCopy(0, answer.data[0].rows) // deep copy whole matrix 
+	h1 := answer.data[0].RowsDeepCopy(0, answer.data[0].rows) // deep copy whole matrix
 	secret1 := client.data[0]
 
-	ratio := p.p/2
+	ratio := p.p / 2
 	val1 := uint64(0)
-	for j := uint64(0); j<p.m; j++ {
-		val1 += ratio*query.data[0].Get(j,0)
+	for j := uint64(0); j < p.m; j++ {
+		val1 += ratio * query.data[0].Get(j, 0)
 	}
-	val1 %= (1<<p.logq)
-	val1 = (1<<p.logq)-val1
+	val1 %= (1 << p.logq)
+	val1 = (1 << p.logq) - val1
 
 	val2 := uint64(0)
-	for j := uint64(0); j<p.l/info.x; j++ {
-		val2 += ratio*query.data[1].Get(j,0)
+	for j := uint64(0); j < p.l/info.x; j++ {
+		val2 += ratio * query.data[1].Get(j, 0)
 	}
-	val2 %= (1<<p.logq)
-	val2 = (1<<p.logq)-val2
+	val2 %= (1 << p.logq)
+	val2 = (1 << p.logq) - val2
 
 	A2 := shared.data[1]
 	if (A2.cols != p.n) || (h1.cols != p.n) {
 		panic("Should not happen!")
 	}
-	for j1 := uint64(0); j1<p.n; j1++ {
+	for j1 := uint64(0); j1 < p.n; j1++ {
 		val3 := uint64(0)
-	        for j2 := uint64(0); j2<A2.rows; j2++ {
-			val3 += ratio*A2.Get(j2,j1)
+		for j2 := uint64(0); j2 < A2.rows; j2++ {
+			val3 += ratio * A2.Get(j2, j1)
 		}
-		val3 %= (1<<p.logq)
-		val3 = (1<<p.logq)-val3
+		val3 %= (1 << p.logq)
+		val3 = (1 << p.logq) - val3
 		v := C.Elem(val3)
-		for k := uint64(0); k<h1.rows; k++ {
-                	h1.data[k*h1.cols+j1] += v
+		for k := uint64(0); k < h1.rows; k++ {
+			h1.data[k*h1.cols+j1] += v
 		}
 	}
 
