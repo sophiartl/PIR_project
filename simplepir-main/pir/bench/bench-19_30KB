@@ -1,0 +1,118 @@
+Working with: n=1024; db size=2^33 (l=137280, m=104858); logq=32; p=495; sigma=6.400000
+Total packed DB size is ~15360.463166 MB
+Executing SimplePIR
+Setup...
+		Offline download: 549120 KB
+Original DB dims: Dims: 137280-by-104858
+After squishing, with compression factor 3: Dims: 137280-by-34953
+Building query...
+	Elapsed for ansering query answer: 182.207726ms
+		Online upload: 409.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 1.69873407s
+	Rate: 9042.300050 MB/s
+	Time : 9042.300050 MB/s
+		Online download: 536.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 549120 KB
+Original DB dims: Dims: 137280-by-104858
+After squishing, with compression factor 3: Dims: 137280-by-34953
+Building query...
+	Elapsed for ansering query answer: 205.644935ms
+		Online upload: 409.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 1.766819362s
+	Rate: 8693.850371 MB/s
+	Time : 8693.850371 MB/s
+		Online download: 536.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 549120 KB
+Original DB dims: Dims: 137280-by-104858
+After squishing, with compression factor 3: Dims: 137280-by-34953
+Building query...
+	Elapsed for ansering query answer: 181.045948ms
+		Online upload: 409.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 1.703808119s
+	Rate: 9015.371505 MB/s
+	Time : 9015.371505 MB/s
+		Online download: 536.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 549120 KB
+Original DB dims: Dims: 137280-by-104858
+After squishing, with compression factor 3: Dims: 137280-by-34953
+Building query...
+	Elapsed for ansering query answer: 180.700984ms
+		Online upload: 409.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 1.958652047s
+	Rate: 7842.364441 MB/s
+	Time : 7842.364441 MB/s
+		Online download: TOD.000000 KB
+Executing SimplePIR
+Setup...
+		Offline download: 549120 KB
+Original DB dims: Dims: 137280-by-104858
+After squishing, with compression factor 3: Dims: 137280-by-34953
+Building query...
+	Elapsed for ansering query answer: 183.280742ms
+		Online upload: 409.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 1.72410235s
+	Rate: 8909.252497 MB/s
+	Time : 8909.252497 MB/s
+		Online download: 536.000000 KB
+Avg SimplePIR time query generation nanoseconds: 186576067.000000 s
+Avg SimplePIR time query processing nanoseconds: 1770423189.600000 s
+goos: linux
+goarch: amd64
+pkg: github.com/ahenzinger/simplepir/pir
+cpu: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz
+BenchmarkSimplePirSingle-112     	       1	2531372777322 ns/op
+Working with: n=1024; db size=2^33 (l=142765, m=104858); logq=32; p=390; sigma=6.400000
+Total packed DB size is ~15360.377498 MB
+Executing DoublePIR
+Setup...
+		Offline download: 467812352 KB
+Original DB dims: Dims: 142765-by-104858
+After squishing, with compression factor 3: Dims: 142765-by-34953
+Building query...
+	Elapsed for ansering query answer: 182.654229ms
+		Online upload: 409.000000 KB
+Answering query...
+114212-by-2 vs. 6-by-1024
+	Elapsed for ansering query answer: 3.273954685s
+	Rate: 4691.689096 MB/s
+	Time : 4691.689096 MB/s
+		Online download: 914142.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 467812352 KB
+Original DB dims: Dims: 142765-by-104858
+After squishing, with compression factor 3: Dims: 142765-by-34953
+Building query...
+	Elapsed for ansering query answer: 203.587144ms
+		Online upload: 409.000000 KB
+Answering query...
+114212-by-2 vs. 6-by-1024
+	Elapsed for ansering query answer: 2.520018303s
+	Rate: 6095.343625 MB/s
+	Time : 6095.343625 MB/s
+		Online download: 914142.000000 KB
+Executing DoublePIR
+Setup...
+		Offline download: 467812352 KB
+Original DB dims: Dims: 142765-by-104858
+After squishing, with compression factor 3: Dims: 142765-by-34953
+Building query...
+	Elapsed for ansering query answer: 180.580472ms
+		Online upload: 409.000000 KB
+Answering query...
+114212-by-2 vs. 6-by-1024
+	Elapsed for ansering query answer: 2.495480313s
+	Rate: 6155.278973 MB/s
+	Time : 6155.278973 MB/s
+		Online download: 914142.000000 KB
