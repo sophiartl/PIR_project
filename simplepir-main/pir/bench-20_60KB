@@ -6,16 +6,16 @@ Setup...
 Original DB dims: Dims: 282530-by-209716
 After squishing, with compression factor 3: Dims: 282530-by-69906
 Building query...
-	Elapsed for ansering query answer: 416.862202ms
+	Elapsed for ansering query answer: 432.249305ms
 		Online upload: 819.000000 KB
 Answering query...
-	Elapsed for ansering query answer: 7.209535649s
-	Rate: 8523.935279 MB/s
-	Time : 8523.935279 MB/s
+	Elapsed for ansering query answer: 6.766443642s
+	Rate: 9082.114404 MB/s
+	Time : 9082.114404 MB/s
 		Online download: 1103.000000 KB
 Executing SimplePIR
 Setup...
 		Offline download: 1130120 KB
 Original DB dims: Dims: 282530-by-209716
 signal: killed
-FAIL	github.com/ahenzinger/simplepir/pir	8333.784s
+FAIL	github.com/ahenzinger/simplepir/pir	8374.942s
