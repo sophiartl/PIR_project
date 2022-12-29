@@ -94,7 +94,7 @@ func RunFakePIR(pi PIR, DB *Database, p Params, i []uint64,
 }
 
 // Run full PIR scheme (offline + online phases).
-func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64) {
+func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64, float64, float64, float64, int64, int64, int64, int64) {
 	fmt.Printf("Executing %s\n", pi.Name())
 	//fmt.Printf("Memory limit: %d\n", debug.SetMemoryLimit(math.MaxInt64))
 	debug.SetGCPercent(-1)
@@ -103,18 +103,19 @@ func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64) {
 	if DB.data.rows/num_queries < DB.info.ne {
 		panic("Too many queries to handle!")
 	}
-	batch_sz := DB.data.rows / (DB.info.ne * num_queries) * DB.data.cols
+	batch_sz := DB.data.rows * DB.data.cols
 	bw := float64(0)
 
 	shared_state := pi.Init(DB.info, p)
-
+	//Hint time
 	fmt.Println("Setup...")
 	start := time.Now()
 	server_state, offline_download := pi.Setup(DB, shared_state, p)
-	printTime(start)
-	comm := float64(offline_download.size() * uint64(p.logq) / (8.0 * 1024.0))
-	fmt.Printf("\t\tOffline download: %f KB\n", comm)
-	bw += comm
+	hint_time := printTime(start)
+	hint_size := float64(offline_download.size() * uint64(p.logq) / (8.0 * 1024.0))
+	fmt.Printf("\t\tOffline download: %f KB\n", hint_size)
+
+	bw += hint_size
 	runtime.GC()
 
 	fmt.Println("Building query...")
@@ -128,10 +129,10 @@ func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64) {
 		query.data = append(query.data, q)
 	}
 	runtime.GC()
-	printTime(start)
-	comm = float64(query.size() * uint64(p.logq) / (8.0 * 1024.0))
-	fmt.Printf("\t\tOnline upload: %f KB\n", comm)
-	bw += comm
+	query_time := printTime(start)
+	query_size := float64(query.size() * uint64(p.logq) / (8.0 * 1024.0))
+	fmt.Printf("\t\tOnline upload: %f KB\n", query_size)
+	bw += query_size
 	runtime.GC()
 
 	fmt.Println("Answering query...")
@@ -139,15 +140,15 @@ func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64) {
 	answer := pi.Answer(DB, query, server_state, shared_state, p)
 	elapsed := printTime(start)
 	rate := printRate(p, elapsed, len(i))
-	comm = float64(answer.size() * uint64(p.logq) / (8.0 * 1024.0))
-	fmt.Printf("\t\tOnline download: %f KB\n", comm)
-	bw += comm
+	answer_time := elapsed
+	answer_size := float64(answer.size() * uint64(p.logq) / (8.0 * 1024.0))
+	fmt.Printf("\t\tOnline download: %f KB\n", answer_size)
+	bw += answer_size
 	runtime.GC()
 
 	pi.Reset(DB, p)
 	fmt.Println("Reconstructing...")
 	start = time.Now()
-
 	for index, _ := range i {
 		index_to_query := i[index] + uint64(index)*batch_sz
 		val := pi.Recover(index_to_query, uint64(index), offline_download,
@@ -161,9 +162,9 @@ func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64) {
 		}
 	}
 	fmt.Println("Success!")
-	printTime(start)
+	decode_time := printTime(start)
 
 	runtime.GC()
 	debug.SetGCPercent(100)
-	return rate, bw
+	return rate, bw, hint_size, query_size, answer_size, int64(hint_time), int64(query_time), int64(answer_time), int64(decode_time)
 }
