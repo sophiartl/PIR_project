@@ -94,7 +94,7 @@ func RunFakePIR(pi PIR, DB *Database, p Params, i []uint64,
 }
 
 // Run full PIR scheme (offline + online phases).
-func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64, float64, float64, float64, int64, int64, int64, int64) {
+func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64, []float64, float64, float64, int64, int64, int64, int64) {
 	fmt.Printf("Executing %s\n", pi.Name())
 	//fmt.Printf("Memory limit: %d\n", debug.SetMemoryLimit(math.MaxInt64))
 	debug.SetGCPercent(-1)
@@ -166,5 +166,18 @@ func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64, float
 
 	runtime.GC()
 	debug.SetGCPercent(100)
-	return rate, bw, hint_size, query_size, answer_size, int64(hint_time), int64(query_time), int64(answer_time), int64(decode_time)
+
+	var double_hint []float64
+	if pi.Name() == "DoublePIR" {
+		fmt.Printf("\t\tCleint hint: %d KB\n", server_state.data[0].size())
+		client_hint := float64(offline_download.size() * uint64(p.logq) / (8.0 * 1024.0))
+		server_hint := float64(server_state.data[0].size() * uint64(p.logq) / (8.0 * 1024.0))
+		double_hint = append(double_hint, client_hint)
+		double_hint = append(double_hint, server_hint)
+
+	} else {
+		double_hint = append(double_hint, float64(offline_download.size()*uint64(p.logq)/(8.0*1024.0)))
+	}
+
+	return rate, bw, double_hint, query_size, answer_size, int64(hint_time), int64(query_time), int64(answer_time), int64(decode_time)
 }

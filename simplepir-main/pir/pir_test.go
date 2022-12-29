@@ -269,7 +269,7 @@ func BenchmarkSimplePirSingle(b *testing.B) {
 	var gener []float64
 	var hint []float64
 	var dec []float64
-	var hint_size float64
+	var hint_size []float64
 	var query_size float64
 	var answer_size float64
 	var tput float64
@@ -289,9 +289,11 @@ func BenchmarkSimplePirSingle(b *testing.B) {
 	}
 	// fmt.Printf("Avg SimplePIR tput, except for first run: %f MB/s\n", avg(tputs))
 	// fmt.Printf("Std dev of SimplePIR tput, except for first run: %f MB/s\n", stddev(tputs))
-	fmt.Printf("Avg Doubl timee query generation : %f micros\n", avg(gener)/1000.0)
-	fmt.Printf("Avg Doubl time query processing : %f micros\n", avg(processing)/1000.0)
-	fmt.Printf("Avg Doubl time Hint processing : %f micros\n", avg(hint)/1000.0)
+	fmt.Printf("Avg Singl timee query generation : %f micros\n", avg(gener)/1000.0)
+	fmt.Printf("Avg Singl time query processing : %f micros\n", avg(processing)/1000.0)
+	fmt.Printf("Avg Singl time Hint processing : %f micros\n", avg(hint)/1000.0)
+	fmt.Printf("Hint client : %f micros\n", hint_size[0])
+
 	// read the file
 	var path = "sample.csv"
 	f_, err_ := os.OpenFile(path, os.O_APPEND|os.O_WRONLY, os.ModeAppend)
@@ -301,7 +303,7 @@ func BenchmarkSimplePirSingle(b *testing.B) {
 	}
 	defer f_.Close()
 	var data [][]string
-	data = append(data, []string{"Simple", fmt.Sprintf("%f", avg(hint)/1000.0), fmt.Sprintf("%f", avg(gener)/1000.0), fmt.Sprintf("%f", avg(processing)/1000.0), fmt.Sprintf("%f", avg(dec)/1000.0), fmt.Sprintf("%f", hint_size/1024), fmt.Sprintf("%f", query_size), fmt.Sprintf("%f", answer_size)})
+	data = append(data, []string{"Simple", fmt.Sprintf("%f", avg(hint)/1000.0), fmt.Sprintf("%f", avg(gener)/1000.0), fmt.Sprintf("%f", avg(processing)/1000.0), fmt.Sprintf("%f", avg(dec)/1000.0), fmt.Sprintf("%f", hint_size[0]/1024), fmt.Sprintf("%f", query_size), fmt.Sprintf("%f", answer_size)})
 
 	w := csv.NewWriter(f_)
 	w.WriteAll(data)
@@ -346,7 +348,7 @@ func BenchmarkDoublePirSingle(b *testing.B) {
 	var gener []float64
 	var hint []float64
 	var dec []float64
-	var hint_size float64
+	var hint_size []float64
 	var query_size float64
 	var answer_size float64
 	var tput float64
@@ -369,6 +371,9 @@ func BenchmarkDoublePirSingle(b *testing.B) {
 	fmt.Printf("Avg Doubl timee query generation : %f micros\n", avg(gener)/1000.0)
 	fmt.Printf("Avg Doubl time query processing : %f micros\n", avg(processing)/1000.0)
 	fmt.Printf("Avg Doubl time Hint processing : %f micros\n", avg(hint)/1000.0)
+	fmt.Printf("Hint client : %f KB\n", hint_size[0])
+	fmt.Printf("Hint server : %f KB\n", hint_size[1])
+
 	// read the file
 	var path = "sample.csv"
 	f_, err_ := os.OpenFile(path, os.O_APPEND|os.O_WRONLY, os.ModeAppend)
@@ -378,7 +383,7 @@ func BenchmarkDoublePirSingle(b *testing.B) {
 	}
 	defer f_.Close()
 	var data [][]string
-	data = append(data, []string{"Double", fmt.Sprintf("%f", avg(hint)/1000.0), fmt.Sprintf("%f", avg(gener)/1000.0), fmt.Sprintf("%f", avg(processing)/1000.0), fmt.Sprintf("%f", avg(dec)/1000.0), fmt.Sprintf("%f", hint_size/(1024*1024)), fmt.Sprintf("%f", query_size), fmt.Sprintf("%f", answer_size)})
+	data = append(data, []string{"Double", fmt.Sprintf("%f", avg(hint)/1000.0), fmt.Sprintf("%f", avg(gener)/1000.0), fmt.Sprintf("%f", avg(processing)/1000.0), fmt.Sprintf("%f", avg(dec)/1000.0), fmt.Sprintf("%f", hint_size[1]/(1024)), fmt.Sprintf("%f", hint_size[0]/(1024*1024)), fmt.Sprintf("%f", query_size), fmt.Sprintf("%f", answer_size)})
 
 	w := csv.NewWriter(f_)
 	w.WriteAll(data)

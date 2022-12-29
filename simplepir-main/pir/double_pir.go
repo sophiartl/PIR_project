@@ -97,6 +97,7 @@ func (pi *DoublePIR) Setup(DB *Database, shared State, p Params) (State, Msg) {
 		A2_copy.Concat(MatrixZeros(3-(A2_copy.rows%3), A2_copy.cols))
 	}
 	A2_copy.Transpose()
+	fmt.Printf("\t\tCleint hintREAL : %d KB\n", H1.size())
 
 	return MakeState(H1, A2_copy), MakeMsg(H2)
 }
