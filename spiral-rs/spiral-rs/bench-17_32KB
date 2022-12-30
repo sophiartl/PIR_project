@@ -1,0 +1,59 @@
+Starting with parameters for 2^17 x 32768 bytes...
+Using a 131072 x 32768 byte database (4294967296 bytes total)
+fetching index 69428 out of 131072 items
+initializing client
+generating public parameters
+public parameters size: 10485792 bytes
+initial query size: 16416 bytes
+generating db
+in fucntion 1
+processing query
+processing query (took 9387566 us).
+response size: 61440 bytes
+decoding response
+decoding reponse (took 2341 us).
+completed correctly!
+generating public parameters
+public parameters size: 10485792 bytes
+initial query size: 16416 bytes
+generating db
+in fucntion 1
+processing query
+processing query (took 13772409 us).
+response size: 61440 bytes
+decoding response
+decoding reponse (took 2157 us).
+completed correctly!
+generating public parameters
+public parameters size: 10485792 bytes
+initial query size: 16416 bytes
+generating db
+in fucntion 1
+processing query
+processing query (took 13534490 us).
+response size: 61440 bytes
+decoding response
+decoding reponse (took 2169 us).
+completed correctly!
+generating public parameters
+public parameters size: 10485792 bytes
+initial query size: 16416 bytes
+generating db
+in fucntion 1
+processing query
+processing query (took 13530506 us).
+response size: 61440 bytes
+decoding response
+decoding reponse (took 2176 us).
+completed correctly!
+generating public parameters
+public parameters size: 10485792 bytes
+initial query size: 16416 bytes
+generating db
+in fucntion 1
+processing query
+processing query (took 13665061 us).
+response size: 61440 bytes
+decoding response
+decoding reponse (took 2434 us).
+completed correctly!

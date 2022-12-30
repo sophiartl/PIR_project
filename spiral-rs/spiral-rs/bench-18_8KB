@@ -1,59 +1,59 @@
-Starting with parameters for 2^18 x 1024 bytes...
-Using a 32768 x 8192 byte database (268435456 bytes total)
-fetching index 8409 out of 32768 items
+Starting with parameters for 2^18 x 8192 bytes...
+Using a 262144 x 8192 byte database (2147483648 bytes total)
+fetching index 235797 out of 262144 items
 initializing client
 generating public parameters
-public parameters size: 8126496 bytes
+public parameters size: 9699360 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 1160102 us).
+processing query (took 5142632 us).
 response size: 20480 bytes
 decoding response
-decoding reponse (took 701 us).
+decoding reponse (took 712 us).
 completed correctly!
 generating public parameters
-public parameters size: 8126496 bytes
+public parameters size: 9699360 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 1342967 us).
+processing query (took 6879360 us).
 response size: 20480 bytes
 decoding response
 decoding reponse (took 724 us).
 completed correctly!
 generating public parameters
-public parameters size: 8126496 bytes
+public parameters size: 9699360 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 1264902 us).
+processing query (took 6933975 us).
 response size: 20480 bytes
 decoding response
 decoding reponse (took 726 us).
 completed correctly!
 generating public parameters
-public parameters size: 8126496 bytes
+public parameters size: 9699360 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 1290407 us).
+processing query (took 6897146 us).
 response size: 20480 bytes
 decoding response
-decoding reponse (took 723 us).
+decoding reponse (took 725 us).
 completed correctly!
 generating public parameters
-public parameters size: 8126496 bytes
+public parameters size: 9699360 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 1254025 us).
+processing query (took 6893513 us).
 response size: 20480 bytes
 decoding response
-decoding reponse (took 764 us).
+decoding reponse (took 726 us).
 completed correctly!

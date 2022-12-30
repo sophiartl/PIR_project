@@ -1,6 +1,6 @@
-Starting with parameters for 2^18 x 256 bytes...
-Using a 16384 x 4096 byte database (67108864 bytes total)
-fetching index 440 out of 16384 items
+Starting with parameters for 2^17 x 256 bytes...
+Using a 8192 x 4096 byte database (33554432 bytes total)
+fetching index 4022 out of 8192 items
 initializing client
 generating public parameters
 public parameters size: 6488096 bytes
@@ -8,10 +8,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 701356 us).
+processing query (took 468426 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 694 us).
+decoding reponse (took 825 us).
 completed correctly!
 generating public parameters
 public parameters size: 6488096 bytes
@@ -19,10 +19,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 829309 us).
+processing query (took 541949 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 718 us).
+decoding reponse (took 950 us).
 completed correctly!
 generating public parameters
 public parameters size: 6488096 bytes
@@ -30,10 +30,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 841488 us).
+processing query (took 517193 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 709 us).
+decoding reponse (took 813 us).
 completed correctly!
 generating public parameters
 public parameters size: 6488096 bytes
@@ -41,10 +41,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 728033 us).
+processing query (took 467419 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 710 us).
+decoding reponse (took 2242 us).
 completed correctly!
 generating public parameters
 public parameters size: 6488096 bytes
@@ -52,8 +52,8 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 764697 us).
+processing query (took 465148 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 714 us).
+decoding reponse (took 925 us).
 completed correctly!
