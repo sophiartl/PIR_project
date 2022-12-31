@@ -1,6 +1,6 @@
 Starting with parameters for 2^14 x 262144 bytes...
 Using a 16384 x 262144 byte database (4294967296 bytes total)
-fetching index 6632 out of 16384 items
+fetching index 13731 out of 16384 items
 initializing client
 generating public parameters
 public parameters size: 42991648 bytes
@@ -8,21 +8,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 5189638 us).
+processing query (took 5346590 us).
 response size: 409600 bytes
 decoding response
-decoding reponse (took 14967 us).
-completed correctly!
-generating public parameters
-public parameters size: 42991648 bytes
-initial query size: 16416
-generating db
-in fucntion 1
-processing query
-processing query (took 7802015 us).
-response size: 409600 bytes
-decoding response
-decoding reponse (took 15014 us).
+decoding reponse (took 14968 us).
 completed correctly!
 generating public parameters
 public parameters size: 42991648 bytes
@@ -30,10 +19,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 7918279 us).
+processing query (took 7735501 us).
 response size: 409600 bytes
 decoding response
-decoding reponse (took 16333 us).
+decoding reponse (took 15065 us).
 completed correctly!
 generating public parameters
 public parameters size: 42991648 bytes
@@ -41,10 +30,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 7877960 us).
+processing query (took 7731580 us).
 response size: 409600 bytes
 decoding response
-decoding reponse (took 16223 us).
+decoding reponse (took 16059 us).
 completed correctly!
 generating public parameters
 public parameters size: 42991648 bytes
@@ -52,8 +41,19 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 7811485 us).
+processing query (took 7791194 us).
 response size: 409600 bytes
 decoding response
-decoding reponse (took 15003 us).
+decoding reponse (took 16514 us).
+completed correctly!
+generating public parameters
+public parameters size: 42991648 bytes
+initial query size: 16416 bytes
+generating db
+in fucntion 1
+processing query
+processing query (took 7777797 us).
+response size: 409600 bytes
+decoding response
+decoding reponse (took 16419 us).
 completed correctly!

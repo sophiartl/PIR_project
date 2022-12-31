@@ -1,6 +1,6 @@
-Starting with parameters for 2^18 x 131072 bytes...
+Starting with parameters for 2^19 x 65536 bytes...
 Using a 262144 x 131072 byte database (34359738368 bytes total)
-fetching index 168954 out of 262144 items
+fetching index 216815 out of 262144 items
 initializing client
 generating public parameters
 public parameters size: 13631520 bytes
@@ -8,10 +8,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 90540190 us).
+processing query (took 106957229 us).
 response size: 204800 bytes
 decoding response
-decoding reponse (took 7814 us).
+decoding reponse (took 7779 us).
 completed correctly!
 generating public parameters
 public parameters size: 13631520 bytes
@@ -19,10 +19,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 115303775 us).
+processing query (took 115450369 us).
 response size: 204800 bytes
 decoding response
-decoding reponse (took 7785 us).
+decoding reponse (took 7803 us).
 completed correctly!
 generating public parameters
 public parameters size: 13631520 bytes
@@ -30,10 +30,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 116362197 us).
+processing query (took 115132457 us).
 response size: 204800 bytes
 decoding response
-decoding reponse (took 8449 us).
+decoding reponse (took 7852 us).
 completed correctly!
 generating public parameters
 public parameters size: 13631520 bytes
@@ -41,10 +41,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 116423436 us).
+processing query (took 114886725 us).
 response size: 204800 bytes
 decoding response
-decoding reponse (took 7784 us).
+decoding reponse (took 7836 us).
 completed correctly!
 generating public parameters
 public parameters size: 13631520 bytes
@@ -52,8 +52,8 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 114894063 us).
+processing query (took 115748867 us).
 response size: 204800 bytes
 decoding response
-decoding reponse (took 7815 us).
+decoding reponse (took 7895 us).
 completed correctly!

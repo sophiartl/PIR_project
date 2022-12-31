@@ -1,6 +1,6 @@
 Starting with parameters for 2^16 x 1024 bytes...
 Using a 16384 x 4096 byte database (67108864 bytes total)
-fetching index 12041 out of 16384 items
+fetching index 12003 out of 16384 items
 initializing client
 generating public parameters
 public parameters size: 6488096 bytes
@@ -8,8 +8,52 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 859186 us).
+processing query (took 716400 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 712 us).
+decoding reponse (took 1044 us).
+completed correctly!
+generating public parameters
+public parameters size: 6488096 bytes
+initial query size: 16416 bytes
+generating db
+in fucntion 1
+processing query
+processing query (took 827473 us).
+response size: 14336 bytes
+decoding response
+decoding reponse (took 1138 us).
+completed correctly!
+generating public parameters
+public parameters size: 6488096 bytes
+initial query size: 16416 bytes
+generating db
+in fucntion 1
+processing query
+processing query (took 799859 us).
+response size: 14336 bytes
+decoding response
+decoding reponse (took 2493 us).
+completed correctly!
+generating public parameters
+public parameters size: 6488096 bytes
+initial query size: 16416 bytes
+generating db
+in fucntion 1
+processing query
+processing query (took 804187 us).
+response size: 14336 bytes
+decoding response
+decoding reponse (took 1253 us).
+completed correctly!
+generating public parameters
+public parameters size: 6488096 bytes
+initial query size: 16416 bytes
+generating db
+in fucntion 1
+processing query
+processing query (took 710593 us).
+response size: 14336 bytes
+decoding response
+decoding reponse (took 987 us).
 completed correctly!

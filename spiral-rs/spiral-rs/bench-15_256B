@@ -1,6 +1,6 @@
 Starting with parameters for 2^15 x 256 bytes...
 Using a 2048 x 4096 byte database (8388608 bytes total)
-fetching index 363 out of 2048 items
+fetching index 1090 out of 2048 items
 initializing client
 generating public parameters
 public parameters size: 5505056 bytes
@@ -8,10 +8,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 237176 us).
+processing query (took 257267 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 706 us).
+decoding reponse (took 698 us).
 completed correctly!
 generating public parameters
 public parameters size: 5505056 bytes
@@ -19,10 +19,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 221979 us).
+processing query (took 239437 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 693 us).
+decoding reponse (took 694 us).
 completed correctly!
 generating public parameters
 public parameters size: 5505056 bytes
@@ -30,10 +30,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 265537 us).
+processing query (took 252193 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 712 us).
+decoding reponse (took 705 us).
 completed correctly!
 generating public parameters
 public parameters size: 5505056 bytes
@@ -41,10 +41,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 237762 us).
+processing query (took 228553 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 696 us).
+decoding reponse (took 699 us).
 completed correctly!
 generating public parameters
 public parameters size: 5505056 bytes
@@ -52,8 +52,8 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 250687 us).
+processing query (took 236030 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 702 us).
+decoding reponse (took 700 us).
 completed correctly!

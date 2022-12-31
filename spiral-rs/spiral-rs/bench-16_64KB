@@ -1,6 +1,6 @@
 Starting with parameters for 2^16 x 65536 bytes...
 Using a 65536 x 65536 byte database (4294967296 bytes total)
-fetching index 50581 out of 65536 items
+fetching index 49477 out of 65536 items
 initializing client
 generating public parameters
 public parameters size: 10485792 bytes
@@ -8,10 +8,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 5147741 us).
+processing query (took 5423459 us).
 response size: 122880 bytes
 decoding response
-decoding reponse (took 7904 us).
+decoding reponse (took 4697 us).
 completed correctly!
 generating public parameters
 public parameters size: 10485792 bytes
@@ -19,10 +19,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 7597982 us).
+processing query (took 7867438 us).
 response size: 122880 bytes
 decoding response
-decoding reponse (took 14508 us).
+decoding reponse (took 5028 us).
 completed correctly!
 generating public parameters
 public parameters size: 10485792 bytes
@@ -30,10 +30,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 7683718 us).
+processing query (took 7840985 us).
 response size: 122880 bytes
 decoding response
-decoding reponse (took 7803 us).
+decoding reponse (took 4377 us).
 completed correctly!
 generating public parameters
 public parameters size: 10485792 bytes
@@ -41,10 +41,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 7560811 us).
+processing query (took 7916600 us).
 response size: 122880 bytes
 decoding response
-decoding reponse (took 6627 us).
+decoding reponse (took 10841 us).
 completed correctly!
 generating public parameters
 public parameters size: 10485792 bytes
@@ -52,8 +52,8 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 7543092 us).
+processing query (took 7877578 us).
 response size: 122880 bytes
 decoding response
-decoding reponse (took 7304 us).
+decoding reponse (took 7586 us).
 completed correctly!

@@ -1,6 +1,6 @@
 Starting with parameters for 2^16 x 256 bytes...
 Using a 4096 x 4096 byte database (16777216 bytes total)
-fetching index 3643 out of 4096 items
+fetching index 1636 out of 4096 items
 initializing client
 generating public parameters
 public parameters size: 6422560 bytes
@@ -8,10 +8,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 387672 us).
+processing query (took 389470 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 700 us).
+decoding reponse (took 1066 us).
 completed correctly!
 generating public parameters
 public parameters size: 6422560 bytes
@@ -19,10 +19,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 413496 us).
+processing query (took 419640 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 771 us).
+decoding reponse (took 1242 us).
 completed correctly!
 generating public parameters
 public parameters size: 6422560 bytes
@@ -30,10 +30,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 352908 us).
+processing query (took 363876 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 697 us).
+decoding reponse (took 804 us).
 completed correctly!
 generating public parameters
 public parameters size: 6422560 bytes
@@ -41,10 +41,10 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 400277 us).
+processing query (took 409176 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 713 us).
+decoding reponse (took 770 us).
 completed correctly!
 generating public parameters
 public parameters size: 6422560 bytes
@@ -52,8 +52,8 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 409188 us).
+processing query (took 398816 us).
 response size: 14336 bytes
 decoding response
-decoding reponse (took 710 us).
+decoding reponse (took 1236 us).
 completed correctly!

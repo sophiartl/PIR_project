@@ -1,6 +1,6 @@
 Starting with parameters for 2^15 x 131072 bytes...
 Using a 32768 x 131072 byte database (4294967296 bytes total)
-fetching index 454 out of 32768 items
+fetching index 14839 out of 32768 items
 initializing client
 generating public parameters
 public parameters size: 13631520 bytes
@@ -8,44 +8,52 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 9831889 us).
+processing query (took 10255120 us).
 response size: 204800 bytes
 decoding response
-decoding reponse (took 7498 us).
+decoding reponse (took 7516 us).
 completed correctly!
+generating public parameters
+public parameters size: 13631520 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 13819435 us).
+processing query (took 14354918 us).
 response size: 204800 bytes
 decoding response
-decoding reponse (took 7877 us).
+decoding reponse (took 7602 us).
 completed correctly!
+generating public parameters
+public parameters size: 13631520 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 13846295 us).
+processing query (took 14148823 us).
 response size: 204800 bytes
 decoding response
-decoding reponse (took 7884 us).
+decoding reponse (took 7616 us).
 completed correctly!
+generating public parameters
+public parameters size: 13631520 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 13784251 us).
+processing query (took 14160267 us).
 response size: 204800 bytes
 decoding response
-decoding reponse (took 7547 us).
+decoding reponse (took 7657 us).
 completed correctly!
+generating public parameters
+public parameters size: 13631520 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 13937780 us).
+processing query (took 14306756 us).
 response size: 204800 bytes
 decoding response
-decoding reponse (took 7904 us).
+decoding reponse (took 7860 us).
 completed correctly!

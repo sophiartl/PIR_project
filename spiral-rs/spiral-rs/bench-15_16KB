@@ -1,6 +1,6 @@
 Starting with parameters for 2^15 x 16384 bytes...
 Using a 32768 x 16384 byte database (536870912 bytes total)
-fetching index 29824 out of 32768 items
+fetching index 11570 out of 32768 items
 initializing client
 generating public parameters
 public parameters size: 8126496 bytes
@@ -8,44 +8,52 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 1269572 us).
+processing query (took 1309650 us).
 response size: 40960 bytes
 decoding response
-decoding reponse (took 4623 us).
+decoding reponse (took 3876 us).
 completed correctly!
+generating public parameters
+public parameters size: 8126496 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 1540827 us).
+processing query (took 1580689 us).
 response size: 40960 bytes
 decoding response
-decoding reponse (took 2164 us).
+decoding reponse (took 4763 us).
 completed correctly!
+generating public parameters
+public parameters size: 8126496 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 1553735 us).
+processing query (took 1330826 us).
 response size: 40960 bytes
 decoding response
-decoding reponse (took 1219 us).
+decoding reponse (took 4261 us).
 completed correctly!
+generating public parameters
+public parameters size: 8126496 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 1327302 us).
+processing query (took 1264834 us).
 response size: 40960 bytes
 decoding response
-decoding reponse (took 2154 us).
+decoding reponse (took 2167 us).
 completed correctly!
+generating public parameters
+public parameters size: 8126496 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 1500752 us).
+processing query (took 1227398 us).
 response size: 40960 bytes
 decoding response
-decoding reponse (took 3633 us).
+decoding reponse (took 4639 us).
 completed correctly!

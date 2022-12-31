@@ -1,6 +1,6 @@
 Starting with parameters for 2^15 x 65536 bytes...
 Using a 32768 x 65536 byte database (2147483648 bytes total)
-fetching index 19831 out of 32768 items
+fetching index 2552 out of 32768 items
 initializing client
 generating public parameters
 public parameters size: 8912928 bytes
@@ -8,44 +8,52 @@ initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 3533492 us).
+processing query (took 3583514 us).
 response size: 122880 bytes
 decoding response
-decoding reponse (took 9044 us).
+decoding reponse (took 9218 us).
 completed correctly!
+generating public parameters
+public parameters size: 8912928 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 4732020 us).
+processing query (took 4771720 us).
 response size: 122880 bytes
 decoding response
-decoding reponse (took 4335 us).
+decoding reponse (took 5130 us).
 completed correctly!
+generating public parameters
+public parameters size: 8912928 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 4694751 us).
+processing query (took 4775672 us).
 response size: 122880 bytes
 decoding response
-decoding reponse (took 9641 us).
+decoding reponse (took 5450 us).
 completed correctly!
+generating public parameters
+public parameters size: 8912928 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 4712768 us).
+processing query (took 4785616 us).
 response size: 122880 bytes
 decoding response
-decoding reponse (took 6499 us).
+decoding reponse (took 4777 us).
 completed correctly!
+generating public parameters
+public parameters size: 8912928 bytes
 initial query size: 16416 bytes
 generating db
 in fucntion 1
 processing query
-processing query (took 4729948 us).
+processing query (took 4792233 us).
 response size: 122880 bytes
 decoding response
-decoding reponse (took 8507 us).
+decoding reponse (took 7833 us).
 completed correctly!
