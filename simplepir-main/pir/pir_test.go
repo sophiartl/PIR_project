@@ -304,7 +304,7 @@ func BenchmarkSimplePirSingle(b *testing.B) {
 	defer f_.Close()
 	var data [][]string
 
-	data = append(data, []string{"Simple", fmt.Sprintf("%f", math.Pow(2, float64(log_N))), fmt.Sprintf("%f", float64(D/(8*1024))), fmt.Sprintf("%f", math.Pow(2, float64(log_N))*float64((D/(8*1024)))/1024), fmt.Sprintf("%f", avg(hint)/1000.0), fmt.Sprintf("%f", avg(gener)/1000.0), fmt.Sprintf("%f", avg(processing)/1000.0), fmt.Sprintf("%f", avg(dec)/1000.0), fmt.Sprintf("%f", hint_size[0]/1024), fmt.Sprintf("%f", query_size), fmt.Sprintf("%f", answer_size)})
+	data = append(data, []string{"Simple", fmt.Sprintf("%f", math.Pow(2, float64(log_N))), fmt.Sprintf("%f", float64(d)/(8*1024.0)), fmt.Sprintf("%f", math.Pow(2, float64(log_N))*float64(d)/(8*1024.0)/1024), fmt.Sprintf("%f", avg(hint)/1000.0), fmt.Sprintf("%f", avg(gener)/1000.0), fmt.Sprintf("%f", avg(processing)/1000.0), fmt.Sprintf("%f", avg(dec)/1000.0), fmt.Sprintf("%f", hint_size[0]/1024), fmt.Sprintf("%f", query_size), fmt.Sprintf("%f", answer_size)})
 
 	w := csv.NewWriter(f_)
 	w.WriteAll(data)
@@ -384,7 +384,7 @@ func BenchmarkDoublePirSingle(b *testing.B) {
 	}
 	defer f_.Close()
 	var data [][]string
-	data = append(data, []string{"Double", fmt.Sprintf("%f", math.Pow(2, float64(log_N))), fmt.Sprintf("%f", float64(D/(8*1024))), fmt.Sprintf("%f", math.Pow(2, float64(log_N))*float64((D/(8*1024)))/1024), fmt.Sprintf("%f", avg(hint)/1000.0), fmt.Sprintf("%f", avg(gener)/1000.0), fmt.Sprintf("%f", avg(processing)/1000.0), fmt.Sprintf("%f", avg(dec)/1000.0), fmt.Sprintf("%f", hint_size[1]/(1024)), fmt.Sprintf("%f", hint_size[0]/(1024*1024)), fmt.Sprintf("%f", query_size), fmt.Sprintf("%f", answer_size)})
+	data = append(data, []string{"Double", fmt.Sprintf("%f", math.Pow(2, float64(log_N))), fmt.Sprintf("%f", float64(d)/(8*1024.0)), fmt.Sprintf("%f", math.Pow(2, float64(log_N))*float64(d)/(8*1024.0)/1024), fmt.Sprintf("%f", avg(hint)/1000.0), fmt.Sprintf("%f", avg(gener)/1000.0), fmt.Sprintf("%f", avg(processing)/1000.0), fmt.Sprintf("%f", avg(dec)/1000.0), fmt.Sprintf("%f", hint_size[1]/(1024)), fmt.Sprintf("%f", hint_size[0]/(1024*1024)), fmt.Sprintf("%f", query_size), fmt.Sprintf("%f", answer_size)})
 
 	w := csv.NewWriter(f_)
 	w.WriteAll(data)
