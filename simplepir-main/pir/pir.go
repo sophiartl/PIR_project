@@ -161,7 +161,6 @@ func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64, []flo
 			panic("Reconstruct failed!")
 		}
 	}
-	fmt.Println("Success!")
 	decode_time := printTime(start)
 
 	runtime.GC()

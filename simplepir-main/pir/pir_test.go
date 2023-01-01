@@ -371,9 +371,6 @@ func BenchmarkDoublePirSingle(b *testing.B) {
 	// fmt.Printf("Std dev of SimplePIR tput, except for first run: %f MB/s\n", stddev(tputs))
 	fmt.Printf("Avg Doubl timee query generation : %f micros\n", avg(gener)/1000.0)
 	fmt.Printf("Avg Doubl time query processing : %f micros\n", avg(processing)/1000.0)
-	fmt.Printf("Avg Doubl time Hint processing : %f micros\n", avg(hint)/1000.0)
-	fmt.Printf("Hint client : %f KB\n", hint_size[0])
-	fmt.Printf("Hint server : %f KB\n", hint_size[1])
 
 	// read the file
 	var path = "sample.csv"
