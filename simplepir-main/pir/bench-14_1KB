@@ -1,0 +1,182 @@
+Working with: n=1024; db size=2^23 (l=4120, m=3277); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~16.018671 MB
+Executing SimplePIR
+Setup...
+Original DB dims: Dims: 4120-by-3277
+After squishing, with compression factor 3: Dims: 4120-by-1093
+	Elapsed for ansering query answer: 1.215654s
+		Offline download: 16480.000000 KB
+Building query...
+	Elapsed for ansering query answer: 2.731041ms
+		Online upload: 12.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 1.441167ms
+	Rate: 11115.068959 MB/s
+	Time : 11115.068959 MB/s
+		Online download: 16.000000 KB
+Reconstructing...
+Success!
+	Elapsed for ansering query answer: 438.709µs
+Executing SimplePIR
+Setup...
+Original DB dims: Dims: 4120-by-3277
+After squishing, with compression factor 3: Dims: 4120-by-1093
+	Elapsed for ansering query answer: 1.204054875s
+		Offline download: 16480.000000 KB
+Building query...
+	Elapsed for ansering query answer: 2.776459ms
+		Online upload: 12.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 1.410458ms
+	Rate: 11357.070247 MB/s
+	Time : 11357.070247 MB/s
+		Online download: 16.000000 KB
+Reconstructing...
+Success!
+	Elapsed for ansering query answer: 442.75µs
+Executing SimplePIR
+Setup...
+Original DB dims: Dims: 4120-by-3277
+After squishing, with compression factor 3: Dims: 4120-by-1093
+	Elapsed for ansering query answer: 1.205643375s
+		Offline download: 16480.000000 KB
+Building query...
+	Elapsed for ansering query answer: 2.715833ms
+		Online upload: 12.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 1.459625ms
+	Rate: 10974.510979 MB/s
+	Time : 10974.510979 MB/s
+		Online download: 16.000000 KB
+Reconstructing...
+Success!
+	Elapsed for ansering query answer: 422.708µs
+Executing SimplePIR
+Setup...
+Original DB dims: Dims: 4120-by-3277
+After squishing, with compression factor 3: Dims: 4120-by-1093
+	Elapsed for ansering query answer: 1.209900708s
+		Offline download: 16480.000000 KB
+Building query...
+	Elapsed for ansering query answer: 2.801083ms
+		Online upload: 12.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 1.436167ms
+	Rate: 11153.765953 MB/s
+	Time : 11153.765953 MB/s
+		Online download: 16.000000 KB
+Reconstructing...
+Success!
+	Elapsed for ansering query answer: 419.792µs
+Executing SimplePIR
+Setup...
+Original DB dims: Dims: 4120-by-3277
+After squishing, with compression factor 3: Dims: 4120-by-1093
+	Elapsed for ansering query answer: 1.205857s
+		Offline download: 16480.000000 KB
+Building query...
+	Elapsed for ansering query answer: 2.726875ms
+		Online upload: 12.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 1.427166ms
+	Rate: 11224.111692 MB/s
+	Time : 11224.111692 MB/s
+		Online download: 16.000000 KB
+Reconstructing...
+Success!
+	Elapsed for ansering query answer: 425.833µs
+Avg Singl timee query generation : 2750.258200 micros
+Avg Singl time query processing : 1434.916600 micros
+Avg Singl time Hint processing : 1208221.991600 micros
+Hint client : 16480.000000 micros
+goos: darwin
+goarch: arm64
+pkg: github.com/ahenzinger/simplepir/pir
+BenchmarkSimplePirSingle-8   	       1	8332885500 ns/op
+Working with: n=1024; db size=2^25 (l=900, m=65536); logq=32; p=552; sigma=6.400000
+Total packed DB size is ~64.044313 MB
+Executing DoublePIR
+Setup...
+Running concat cols on matrix of dims 4096-by-900 with n=900
+Original DB dims: Dims: 900-by-65536
+After squishing, with compression factor 3: Dims: 900-by-21846
+		Cleint hintREAL : 3686400 KB
+	Elapsed for ansering query answer: 14.964484042s
+		Offline download: 14745600.000000 KB
+Building query...
+	Elapsed for ansering query answer: 81.442667ms
+		Online upload: 256.000000 KB
+Answering query...
+3600-by-1 vs. 3-by-1024
+	Elapsed for ansering query answer: 20.337041ms
+	Rate: 3149.146062 MB/s
+	Time : 3149.146062 MB/s
+		Online download: 28814.000000 KB
+Reconstructing...
+Success!
+	Elapsed for ansering query answer: 1m9.212743958s
+Executing DoublePIR
+Setup...
+Running concat cols on matrix of dims 4096-by-900 with n=900
+Original DB dims: Dims: 900-by-65536
+After squishing, with compression factor 3: Dims: 900-by-21846
+		Cleint hintREAL : 3686400 KB
+	Elapsed for ansering query answer: 1m18.173574709s
+		Offline download: 14745600.000000 KB
+Building query...
+	Elapsed for ansering query answer: 109.321542ms
+		Online upload: 256.000000 KB
+Answering query...
+3600-by-1 vs. 3-by-1024
+	Elapsed for ansering query answer: 27.290334ms
+	Rate: 2346.776430 MB/s
+	Time : 2346.776430 MB/s
+		Online download: 28814.000000 KB
+Reconstructing...
+Success!
+	Elapsed for ansering query answer: 1m29.158391417s
+Executing DoublePIR
+Setup...
+Running concat cols on matrix of dims 4096-by-900 with n=900
+Original DB dims: Dims: 900-by-65536
+After squishing, with compression factor 3: Dims: 900-by-21846
+		Cleint hintREAL : 3686400 KB
+	Elapsed for ansering query answer: 1m19.823321083s
+		Offline download: 14745600.000000 KB
+Building query...
+	Elapsed for ansering query answer: 134.898208ms
+		Online upload: 256.000000 KB
+Answering query...
+3600-by-1 vs. 3-by-1024
+	Elapsed for ansering query answer: 37.065792ms
+	Rate: 1727.854961 MB/s
+	Time : 1727.854961 MB/s
+		Online download: 28814.000000 KB
+Reconstructing...
+Success!
+	Elapsed for ansering query answer: 1m22.266101042s
+Executing DoublePIR
+Setup...
+Running concat cols on matrix of dims 4096-by-900 with n=900
+Original DB dims: Dims: 900-by-65536
+After squishing, with compression factor 3: Dims: 900-by-21846
+		Cleint hintREAL : 3686400 KB
+	Elapsed for ansering query answer: 1m17.922966125s
+		Offline download: 14745600.000000 KB
+Building query...
+	Elapsed for ansering query answer: 138.097625ms
+		Online upload: 256.000000 KB
+Answering query...
+3600-by-1 vs. 3-by-1024
+	Elapsed for ansering query answer: 35.261125ms
+	Rate: 1816.286706 MB/s
+	Time : 1816.286706 MB/s
+		Online download: 28814.000000 KB
+Reconstructing...
+Success!
+	Elapsed for ansering query answer: 1m23.642277417s
+Executing DoublePIR
+Setup...
+Running concat cols on matrix of dims 4096-by-900 with n=900
+signal: interrupt
+FAIL	github.com/ahenzinger/simplepir/pir	687.564s

@@ -1,3 +1,7 @@
+
+
+cd  simplepir-main/pir
+
 LOG_N=14 D=2048 go test -bench PirSingle -timeout 0 -run=^$ > bench-14_256B  &&
 LOG_N=14 D=8192 go test -bench PirSingle -timeout 0 -run=^$ > bench-14_1KB &&
 LOG_N=14 D=329768 go test -bench PirSingle -timeout 0 -run=^$ > bench-14_4KB  &&
