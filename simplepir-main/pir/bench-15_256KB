@@ -1,0 +1,38 @@
+Working with: n=1024; db size=2^32 (l=221845, m=32768); logq=32; p=701; sigma=6.400000
+Total packed DB size is ~8192.034468 MB
+Executing SimplePIR
+Setup...
+Original DB dims: Dims: 221845-by-32768
+After squishing, with compression factor 3: Dims: 221845-by-10923
+	Elapsed for ansering query answer: 41m44.939729337s
+		Offline download: 887380.000000 KB
+Building query...
+	Elapsed for ansering query answer: 65.816301ms
+		Online upload: 128.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 857.674944ms
+	Rate: 9551.444315 MB/s
+	Time : 9551.444315 MB/s
+		Online download: 866.000000 KB
+Reconstructing...
+	Elapsed for ansering query answer: 112.119042ms
+Executing SimplePIR
+Setup...
+Original DB dims: Dims: 221845-by-32768
+After squishing, with compression factor 3: Dims: 221845-by-10923
+	Elapsed for ansering query answer: 41m41.609498772s
+		Offline download: 887380.000000 KB
+Building query...
+	Elapsed for ansering query answer: 61.347463ms
+		Online upload: 128.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 873.651258ms
+	Rate: 9376.778655 MB/s
+	Time : 9376.778655 MB/s
+		Online download: 866.000000 KB
+Reconstructing...
+	Elapsed for ansering query answer: 110.273791ms
+Executing SimplePIR
+Setup...
+signal: interrupt
+FAIL	github.com/ahenzinger/simplepir/pir	7130.639s
