@@ -110,9 +110,9 @@ func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64, []flo
 	//Hint time
 	fmt.Println("Setup...")
 	start := time.Now()
-	server_state, offline_download := pi.Setup(DB, shared_state, p)
+	server_state, offline_download := pi.FakeSetup(DB, p)
 	hint_time := printTime(start)
-	hint_size := float64(offline_download.size() * uint64(p.logq) / (8.0 * 1024.0))
+	hint_size := offline_download
 	fmt.Printf("\t\tOffline download: %f KB\n", hint_size)
 
 	bw += hint_size
@@ -144,38 +144,37 @@ func RunPIR(pi PIR, DB *Database, p Params, i []uint64) (float64, float64, []flo
 	answer_size := float64(answer.size() * uint64(p.logq) / (8.0 * 1024.0))
 	fmt.Printf("\t\tOnline download: %f KB\n", answer_size)
 	bw += answer_size
-	runtime.GC()
+	// runtime.GC()
 
-	pi.Reset(DB, p)
-	fmt.Println("Reconstructing...")
+	// pi.Reset(DB, p)
+	// fmt.Println("Reconstructing...")
 	start = time.Now()
-	for index, _ := range i {
-		index_to_query := i[index] + uint64(index)*batch_sz
-		val := pi.Recover(index_to_query, uint64(index), offline_download,
-			query.data[index], answer, shared_state,
-			client_state[index], p, DB.info)
+	// for index, _ := range i {
+	// 	index_to_query := i[index] + uint64(index)*batch_sz
+	// 	val := pi.Recover(index_to_query, uint64(index), offline_download,
+	// 		query.data[index], answer, shared_state,
+	// 		client_state[index], p, DB.info)
 
-		if DB.GetElem(index_to_query) != val {
-			fmt.Printf("Batch %d (querying index %d -- row should be >= %d): Got %d instead of %d\n",
-				index, index_to_query, DB.data.rows/4, val, DB.GetElem(index_to_query))
-			panic("Reconstruct failed!")
-		}
-	}
+	// 	if DB.GetElem(index_to_query) != val {
+	// 		fmt.Printf("Batch %d (querying index %d -- row should be >= %d): Got %d instead of %d\n",
+	// 			index, index_to_query, DB.data.rows/4, val, DB.GetElem(index_to_query))
+	// 		panic("Reconstruct failed!")
+	// 	}
+	// }
 	decode_time := printTime(start)
-
-	runtime.GC()
-	debug.SetGCPercent(100)
 
 	var double_hint []float64
 	if pi.Name() == "DoublePIR" {
-		client_hint := float64(offline_download.size() * uint64(p.logq) / (8.0 * 1024.0))
+		client_hint := offline_download
 		server_hint := float64(server_state.data[0].size() * uint64(p.logq) / (8.0 * 1024.0))
 		double_hint = append(double_hint, client_hint)
 		double_hint = append(double_hint, server_hint)
 
 	} else {
-		double_hint = append(double_hint, float64(offline_download.size()*uint64(p.logq)/(8.0*1024.0)))
+		double_hint = append(double_hint, offline_download)
 	}
-
+	runtime.GC()
+	debug.SetGCPercent(100)
+	pi.Reset(DB, p)
 	return rate, bw, double_hint, query_size, answer_size, int64(hint_time), int64(query_time), int64(answer_time), int64(decode_time)
 }

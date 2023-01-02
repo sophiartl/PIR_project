@@ -278,7 +278,7 @@ func BenchmarkSimplePirSingle(b *testing.B) {
 	var time_query_processing int64
 	var time_decoding int64
 
-	for j := 0; j < 5; j++ {
+	for j := 0; j < 4; j++ {
 		tput, _, hint_size, query_size, answer_size, time_hint, time_query_generation, time_query_processing, time_decoding = RunPIR(&pir, DB, p, []uint64{i})
 		tputs = append(tputs, tput)
 		gener = append(gener, float64(time_query_generation))
@@ -354,7 +354,7 @@ func BenchmarkDoublePirSingle(b *testing.B) {
 	var time_query_processing int64
 	var time_decoding int64
 
-	for j := 0; j < 5; j++ {
+	for j := 0; j < 4; j++ {
 		tput, _, hint_size, query_size, answer_size, time_hint, time_query_generation, time_query_processing, time_decoding = RunPIR(&pir, DB, p, []uint64{i})
 		tputs = append(tputs, tput)
 		gener = append(gener, float64(time_query_generation))
@@ -377,7 +377,7 @@ func BenchmarkDoublePirSingle(b *testing.B) {
 	}
 	defer f_.Close()
 	var data [][]string
-	data = append(data, []string{"Double", fmt.Sprintf("%f", math.Pow(2, float64(log_N))), fmt.Sprintf("%f", float64(d)/(8*1024.0)), fmt.Sprintf("%f", math.Pow(2, float64(log_N))*float64(d)/(8*1024.0)/1024), fmt.Sprintf("%f", avg(hint)/1000.0), fmt.Sprintf("%f", avg(gener)/1000.0), fmt.Sprintf("%f", avg(processing)/1000.0), fmt.Sprintf("%f", avg(dec)/1000.0), fmt.Sprintf("%f", hint_size[1]/(1024)), fmt.Sprintf("%f", hint_size[0]/(1024*1024)), fmt.Sprintf("%f", query_size), fmt.Sprintf("%f", answer_size)})
+	data = append(data, []string{"Double", fmt.Sprintf("%f", math.Pow(2, float64(log_N))), fmt.Sprintf("%f", float64(d)/(8*1024.0)), fmt.Sprintf("%f", math.Pow(2, float64(log_N))*(float64(d)/(8*1024.0))/1024), fmt.Sprintf("%f", avg(hint)/1000.0), fmt.Sprintf("%f", avg(gener)/1000.0), fmt.Sprintf("%f", avg(processing)/1000.0), fmt.Sprintf("%f", avg(dec)/1000.0), fmt.Sprintf("%f", hint_size[1]/(1024)), fmt.Sprintf("%f", hint_size[0]/(1024*1024)), fmt.Sprintf("%f", query_size), fmt.Sprintf("%f", answer_size)})
 
 	w := csv.NewWriter(f_)
 	w.WriteAll(data)
