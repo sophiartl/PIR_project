@@ -1,7 +1,0 @@
-
-    n=15; db size=2048; entry size =256; record size =4096;
-    public parameter size=5505056 bytes;
-    query_size=16416 bytes; query generation time=416 us;
-    answer size=14336 bytes; query processing time=388664 us;
-    decoding time=714.
-    

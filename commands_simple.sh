@@ -88,4 +88,3 @@ LOG_N=22 D=131072 go test -bench PirSingle -timeout 0 -run=^$ > bench-22_16KB &&
 LOG_N=22 D=262144 go test -bench PirSingle -timeout 0 -run=^$ > bench-22_32KB  &&
 LOG_N=22 D=524288 go test -bench PirSingle -timeout 0 -run=^$ > bench-22_64KB &&
 LOG_N=22 D=1048576 go test -bench PirSingle -timeout 0 -run=^$ > bench-22_128KB
-
