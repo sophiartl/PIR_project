@@ -440,9 +440,6 @@ func (m *Matrix) ConcatCols(n uint64) {
 		return
 	}
 
-	fmt.Printf("Running concat cols on matrix of dims %d-by-%d with n=%d\n",
-		m.rows, m.cols, n)
-
 	if m.cols%n != 0 {
 		panic("n does not divide num cols")
 	}
