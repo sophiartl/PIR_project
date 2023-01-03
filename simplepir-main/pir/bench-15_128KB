@@ -19,3 +19,61 @@ Answering query...
 	Elapsed for ansering query answer: 58ns
 Executing DoublePIR
 Setup...
+		Offline download: 1939488768 KB
+Original DB dims: Dims: 118377-by-65536
+After squishing, with compression factor 3: Dims: 118377-by-21846
+	Elapsed for ansering query answer: 1m32.791932815s
+		Offline download: 1939488768.000000 KB
+Building query...
+	Elapsed for ansering query answer: 120.404403ms
+		Online upload: 256.000000 KB
+Answering query...
+473508-by-1 vs. 3-by-1024
+	Elapsed for ansering query answer: 3.095478639s
+	Rate: 2646.453653 MB/s
+	Time : 2646.453653 MB/s
+		Online download: 3789913.000000 KB
+	Elapsed for ansering query answer: 58ns
+Executing DoublePIR
+Setup...
+		Offline download: 1939488768 KB
+Original DB dims: Dims: 118377-by-65536
+After squishing, with compression factor 3: Dims: 118377-by-21846
+	Elapsed for ansering query answer: 1m30.794829968s
+		Offline download: 1939488768.000000 KB
+Building query...
+	Elapsed for ansering query answer: 122.019248ms
+		Online upload: 256.000000 KB
+Answering query...
+473508-by-1 vs. 3-by-1024
+	Elapsed for ansering query answer: 2.845096586s
+	Rate: 2879.354182 MB/s
+	Time : 2879.354182 MB/s
+		Online download: 3789913.000000 KB
+	Elapsed for ansering query answer: 179ns
+Executing DoublePIR
+Setup...
+		Offline download: 1939488768 KB
+Original DB dims: Dims: 118377-by-65536
+After squishing, with compression factor 3: Dims: 118377-by-21846
+	Elapsed for ansering query answer: 1m29.173880993s
+		Offline download: 1939488768.000000 KB
+Building query...
+	Elapsed for ansering query answer: 157.218754ms
+		Online upload: 256.000000 KB
+Answering query...
+473508-by-1 vs. 3-by-1024
+	Elapsed for ansering query answer: 2.833850933s
+	Rate: 2890.780406 MB/s
+	Time : 2890.780406 MB/s
+		Online download: 3789913.000000 KB
+	Elapsed for ansering query answer: 91ns
+Avg Doubl timee query generation : 130349.625000 micros
+Avg Doubl time query processing : 2904258.683000 micros
+goos: linux
+goarch: amd64
+pkg: github.com/ahenzinger/simplepir/pir
+cpu: Intel(R) Xeon(R) Gold 6258R CPU @ 2.70GHz
+BenchmarkDoublePirSingle-8   	       1	1513925197650 ns/op
+PASS
+ok  	github.com/ahenzinger/simplepir/pir	1514.999s
