@@ -1,0 +1,50 @@
+Working with: n=1024; db size=2^35 (l=227418, m=174763); logq=32; p=416; sigma=6.400000
+Total packed DB size is ~41221.674454 MB
+Executing SimplePIR
+Setup...
+		Offline download: 909672 KB
+Original DB dims: Dims: 227418-by-174763
+After squishing, with compression factor 3: Dims: 227418-by-58255
+	Elapsed for ansering query answer: 2m43.071953313s
+		Offline download: 909672.000000 KB
+Building query...
+	Elapsed for ansering query answer: 355.667085ms
+		Online upload: 682.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 6.699258862s
+	Rate: 6153.169373 MB/s
+	Time : 6153.169373 MB/s
+		Online download: 888.000000 KB
+	Elapsed for ansering query answer: 451ns
+Executing SimplePIR
+Setup...
+		Offline download: 909672 KB
+Original DB dims: Dims: 227418-by-174763
+After squishing, with compression factor 3: Dims: 227418-by-58255
+	Elapsed for ansering query answer: 2m49.04809101s
+		Offline download: 909672.000000 KB
+Building query...
+	Elapsed for ansering query answer: 397.006773ms
+		Online upload: 682.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 5.95054865s
+	Rate: 6927.373739 MB/s
+	Time : 6927.373739 MB/s
+		Online download: 888.000000 KB
+	Elapsed for ansering query answer: 42ns
+Executing SimplePIR
+Setup...
+		Offline download: 909672 KB
+Original DB dims: Dims: 227418-by-174763
+After squishing, with compression factor 3: Dims: 227418-by-58255
+	Elapsed for ansering query answer: 2m58.891205853s
+		Offline download: 909672.000000 KB
+Building query...
+	Elapsed for ansering query answer: 419.782362ms
+		Online upload: 682.000000 KB
+Answering query...
+	Elapsed for ansering query answer: 6.257917246s
+	Rate: 6587.123612 MB/s
+	Time : 6587.123612 MB/s
+		Online download: 888.000000 KB
+	Elapsed for ansering query answer: 99ns

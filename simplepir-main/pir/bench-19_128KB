@@ -19,3 +19,6 @@ Answering query...
 Executing SimplePIR
 Setup...
 		Offline download: 1446240 KB
+Original DB dims: Dims: 361560-by-174763
+signal: killed
+FAIL	github.com/ahenzinger/simplepir/pir	8751.224s
