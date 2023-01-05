@@ -60,7 +60,7 @@ func (pi *DoublePIR) GetBW(info DBinfo, p Params) {
 
 	online_upload := float64(p.m*p.logq+info.ne/info.x*p.l/info.x*p.logq) / (8.0 * 1024.0)
 	fmt.Printf("\t\tOnline upload: %d KB\n", uint64(online_upload))
-	fmt.Printf("\t\tInfo.x : %d\n", uint64(info.x))
+	fmt.Printf("\t\tInfo.x : %f\n", float64(p.l/info.x))
 	fmt.Printf("\t\tInfo.ne : %d\n", uint64(info.ne))
 
 	online_download := float64(p.delta()*info.x*p.n*p.logq+p.delta()*p.n*info.ne*p.logq+p.delta()*info.ne*p.logq) / (8.0 * 1024.0)
